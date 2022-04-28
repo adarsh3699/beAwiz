@@ -57,8 +57,8 @@ include('OTPfunction.php');
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel='stylesheet' href='assets/css/bootstrap.css'>
-    <link rel='stylesheet' href='assets/css/style4.css'>
+    <link rel='stylesheet' href='bootstrap.css'>
+    <link rel='stylesheet' href='style4.css'>
     <link rel='stylesheet' href='assets/css/font-awesome.css'>
 	
 	<!-- Facebook Pixel Code 
@@ -126,7 +126,7 @@ include('OTPfunction.php');
                     <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="home">
-             <img src="assets/images/logo.png"  alt="Learning Ladder">
+             <img src="logo.png"  alt="Learning Ladder">
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -263,7 +263,7 @@ include('OTPfunction.php');
 <div class="video-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 video-sec">
+            <div class="col-md-6 video-section">
                 <iframe class="youtube-video-iframe" src="https://www.youtube.com/embed/sPqsNof8UOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
             </div>
             <div class="col-md-6 video-cont">
@@ -358,8 +358,8 @@ include('OTPfunction.php');
 <div class="video-section" style="margin-top: 4rem;">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 video-cont">
-                <p class="video2-cont">More hours of screen time are associated with lower well-being in ages 2 to 17. Many learning solutions encourage more and more use of the screen. Hence we need a breakthrough that brings forth the best of technology-based learning and conventional learning</p>
+            <div id="video2-cont" class="col-md-6 video-cont">
+                <p class="video2-text">More hours of screen time are associated with lower well-being in ages 2 to 17. Many learning solutions encourage more and more use of the screen. Hence we need a breakthrough that brings forth the best of technology-based learning and conventional learning</p>
                 <!--<a href="https://www.sciencedirect.com/science/article/pii/S2211335518301827" target="_blank" class="video-btn">Read more</a>-->
 				<a href="its-for-you" target="_blank" class="video-btn">Read more</a>
             </div>
@@ -376,7 +376,7 @@ include('OTPfunction.php');
         <div class="row">
             <div class="col-md-3">
             <div class="mobile-footer-logo">
-                <img src="assets/images/logo.png" alt="Learning Ladder" class="mob-footer-img">
+                <img src="logo.png" alt="Learning Ladder" class="mob-footer-img">
             </div>
             <div class="contact-det">
                 <ul class="cont-det">

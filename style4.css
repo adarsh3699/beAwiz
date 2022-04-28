@@ -170,16 +170,16 @@ p {
 
 .video-cont h3 {
     font-size: 38px;
-    margin-top: 6rem;
+    padding: 6.5rem 0rem;
     text-align: center;
-    margin-bottom: 6rem;
+    margin: unset;
     color: #fff
 }
 
 .video-cont {
     text-align: center;
     background: #2d71b9;
-    padding-bottom: 7rem
+    padding-bottom: 60px;
 }
 
 .video-btn {
@@ -350,8 +350,17 @@ ul.social-icons li {
     }
     .solutions-button-sec {
         display: flex;
+        justify-content: space-around;
         text-align: center
     }
+
+    .get-sol-btn {
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        width: 45%;
+    }
+
     .sol-box {
         border-radius: 0
     }
@@ -403,7 +412,7 @@ ul.social-icons li {
     .home-contact-submit-btn {
         text-align: center
     }
-    .video2-cont {
+    .video2-text {
         color: #2a2a2a!important
     }
     .contact-banner {
@@ -967,12 +976,12 @@ ul.learn-feature-list li {
     margin-top: -3rem
 }
 
-.video2-cont {
-    margin-top: 7rem;
-    margin-bottom: 2.2rem;
-    font-size: 15px;
+.video2-text {
+    padding: 5rem 0px;
+    margin: unset;
+    font-size: 16px;
     line-height: 28px;
-    color: #fff
+    color: #fff;
 }
 
 @media (min-width:768px) {
@@ -1157,6 +1166,24 @@ ul.faq-list a {
     background: #073a54;
     color: #fff;
     margin-top: -9rem
+}
+@media only screen and (max-width:1199px) {
+    .video-cont {
+        padding-bottom: 37px;
+        margin-bottom: 20px;
+    }
+
+    .video-cont h3 {
+        padding: 55px 0px;
+    }
+
+    #video2-cont {
+        padding-bottom: 43px;
+    }
+    
+    .video2-text {
+        padding: 4.5rem 0px;
+    }
 }
 
 @media only screen and (max-width:768px) {
@@ -1451,7 +1478,7 @@ ul.price-card2-list {
     {
         padding-bottom: 2rem;
     }
-    .video2-cont 
+    .video2-text 
     {
         margin-top: 0rem;
     }
@@ -1476,14 +1503,20 @@ ul.price-card2-list {
         padding: 15px 0px;
     }
 }
-@media only screen and (min-width: 600px) and (max-width: 800px)
+@media only screen and (min-width: 600px) and (max-width: 991px)
 {
     .solutions-button-sec 
     {
-        display: block;
+        display: flex;
         text-align: center;
+        justify-content: space-around;
         margin-bottom: 30px;
     }
+
+    .get-sol-btn {
+        width: 40%;
+    }
+
     .its-for-you-main
     {
         padding-top: 12rem;
