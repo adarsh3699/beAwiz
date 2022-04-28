@@ -304,17 +304,17 @@ ul#footer-links li {
 }
 
 .footer-img {
-    margin-bottom: 20px;
-    width: 20%
+    margin-left: -4px;
+    margin-bottom: 10px;
 }
 
 ul#footer-links li a {
     color: #fff
 }
 
-ul.social-icons li {
+.social-icons li {
     display: inline;
-    margin-left: 33px;
+    margin-right: 20px;
     font-size: 26px;
     color: #fff
 }
@@ -322,7 +322,7 @@ ul.social-icons li {
 .social-icons {
     padding: 0;
     margin-top: -10px;
-    margin-left: 3rem
+    margin-left: -3px
 }
 
 .contact-det {
@@ -1214,7 +1214,7 @@ ul.faq-list a {
     }
     .social-icons 
     {
-        margin-left: -15px
+        margin-right: -12px
     }
     .contact-det 
     {
