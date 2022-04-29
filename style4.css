@@ -35,7 +35,7 @@ p {
 .main-home-banner 
 {
     padding: 70px 0 0 0;
-    background: url(../images/hometestbanner.jpg) center no-repeat;
+    background: url(hometestbanner.jpg) center no-repeat;
     background-size: cover;
     color: #ffff;
 	opacity: 0.85;
@@ -43,10 +43,11 @@ p {
 }
 
 .banner-content-head h1 {
+    text-align: center;
     font-size: 40px;
 	color: #2572b7;
 	font-weight: 600;
-    margin-top: 13rem
+    margin-top: 13rem;
 }
 
 .banner-content {
@@ -234,7 +235,7 @@ p {
 
 .next:hover,
 .prev:hover {
-    background-color: #e02227;
+    background-color: #554c4ca1;
     color: #fff
 }
 

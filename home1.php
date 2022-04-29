@@ -375,21 +375,16 @@ include('OTPfunction.php');
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <!-- <div class="mobile-footer-logo"> -->
-                    <img src="logo.png" alt="Learning Ladder" class="footer-img">
-                <!-- </div> -->
-                <!-- <div class="contact-det"> -->
-                    <ul class="cont-det">
-                        <li> <i class="fas fa-envelope"></i><a href="mailto:contact@beawiz.com"> contact@beawiz.com</a></li>
-                        <li> <i class="fas fa-phone"></i><a href="#"> +91-8943600513</a></li> 
-                    </ul>
-                <!-- </div> -->
-                <!-- <div class="social-links"> -->
-                        <ul class="social-icons">
-                            <li> <a href="https://www.facebook.com/beawiz" target="_blank"><i style="color: #38539b" class="fab fa-facebook fb"></i></a></li>
-                            <li> <a href="https://twitter.com/beAwiz2017" target="_blank"><i style="color: #58afe0" class="fab fa-twitter twitter"></i></a> </li>
-                        </ul>
-                <!-- </div> -->
+                <img src="logo.png" alt="Learning Ladder" class="footer-img">
+                <ul class="cont-det">
+                    <li> <i class="fas fa-envelope"></i><a href="mailto:contact@beawiz.com"> contact@beawiz.com</a></li>
+                    <li> <i class="fas fa-phone"></i><a href="#"> +91-8943600513</a></li> 
+                </ul>
+                
+                <ul class="social-icons">
+                    <li> <a href="https://www.facebook.com/beawiz" target="_blank"><i style="color: #38539b" class="fab fa-facebook fb"></i></a></li>
+                    <li> <a href="https://twitter.com/beAwiz2017" target="_blank"><i style="color: #58afe0" class="fab fa-twitter twitter"></i></a> </li>
+                </ul>
             </div>
             <div class="col-md-3">
                 <div class="links-sec">
