@@ -38,8 +38,6 @@ p {
     background: url(Child_Climbing_Ladder.jpg) center no-repeat;
     background-size: cover;
     color: #ffff;
-	/* opacity: 0.9; */
-    padding-bottom: 7rem
 }
 
 .main-home-banner h1 {
@@ -48,7 +46,6 @@ p {
 	color: #f1f1f1;
 	font-weight: 600;
     text-shadow: 2px 2px 4px #000;
-    /* background-color: rgba(74, 69, 78, 0.445); */
 }
 
 .banner-content {
@@ -84,7 +81,7 @@ p {
 
 .sol-cont-head h3 {
     font-size: 30px;
-    margin-top: 5rem;
+    margin-top: 3rem;
     line-height: 40px
 }
 
