@@ -1185,6 +1185,10 @@ ul.faq-list a {
     .video2-text {
         padding: 4.5rem 0px;
     }
+
+    .sol-box-1 {
+        height: unset;
+    }
 }
 
 @media only screen and (max-width:768px) {
@@ -1482,6 +1486,11 @@ ul.price-card2-list {
     .video2-text 
     {
         margin-top: 0rem;
+    }
+
+    .sol-box-1 {
+        height: 100px;
+        padding: 15px;
     }
 
 }
