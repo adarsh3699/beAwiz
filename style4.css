@@ -1515,7 +1515,15 @@ ul.price-card2-list {
         margin-left: 25px!important;
     }
 
-} 
+}
+
+@media only screen and (max-width: 362px)
+{
+    .get-sol-btn {
+        padding: 10px 15px;
+    }
+}
+
 @media only screen and (max-width: 317px)
 {
     .navbar-brand 
