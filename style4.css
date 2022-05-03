@@ -35,19 +35,20 @@ p {
 .main-home-banner 
 {
     padding: 70px 0 0 0;
-    background: url(hometestbanner.jpg) center no-repeat;
+    background: url(Child_Climbing_Ladder.jpg) center no-repeat;
     background-size: cover;
     color: #ffff;
 	opacity: 0.85;
     padding-bottom: 7rem
 }
 
-.banner-content-head h1 {
+.main-home-banner h1 {
     text-align: center;
     font-size: 40px;
-	color: #2572b7;
+	color: #f1f1f1;
 	font-weight: 600;
-    margin-top: 13rem;
+    text-shadow: 2px 2px 4px #000;
+    /* background-color: rgba(74, 69, 78, 0.445); */
 }
 
 .banner-content {
@@ -685,6 +686,10 @@ table th {
     ul.learn-feature-list li {
         line-height: 47px!important
     }
+
+    .banner-content-head h1 {
+        font-size: 25px;
+    }
 }
 
 .pricing-feature-section {
@@ -1185,10 +1190,6 @@ ul.faq-list a {
     .video2-text {
         padding: 4.5rem 0px;
     }
-
-    .sol-box-1 {
-        height: unset;
-    }
 }
 
 @media only screen and (max-width:768px) {
@@ -1468,6 +1469,14 @@ ul.price-card2-list {
     font-size: 23px
 }
 
+@media (max-width: 991px)
+{
+    .sol-box-1{
+        height: unset;
+    }
+
+} 
+
 @media (max-width: 768px)
 {
     .navbar-right 
@@ -1476,12 +1485,13 @@ ul.price-card2-list {
     }
     .video-cont h3 
     {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+        margin-top: -4rem;
+        /* margin-bottom: 4rem; */
     }
     .video-cont 
     {
         padding-bottom: 2rem;
+        margin: unset;
     }
     .video2-text 
     {
