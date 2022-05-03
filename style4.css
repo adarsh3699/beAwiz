@@ -38,7 +38,7 @@ p {
     background: url(Child_Climbing_Ladder.jpg) center no-repeat;
     background-size: cover;
     color: #ffff;
-	opacity: 0.85;
+	/* opacity: 0.9; */
     padding-bottom: 7rem
 }
 
