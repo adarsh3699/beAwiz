@@ -185,15 +185,17 @@ include('OTPfunction.php');
 <!-- home banner -->
 <div class="main-home-banner" >
     <div class="container">
+        <div class="row">
             <div class="banner-content">
                 <div class="banner-content-head">
-                    <h1>Integrating Learning with Emotional Preparedness</h1>
-                    </div>
-                    <div class="banner-content-content">
-                    <p style="font-size: 18px;"><span style="background-color: #2572b7"></span></p> 
+                    <!-- <h1>Integrating Learning with Emotional Preparedness</h1> -->
+                </div>
+                <div class="banner-content-content">
+                    <!-- <p style="font-size: 18px;"><span style="background-color: #2572b7"></span></p>  -->
                 </div> 
                     <!-- <a href="#" data-toggle="modal" data-target="#myModal" class="btn-banner">Get Your Free Analysis Today</a> -->
             </div>
+        </div>
     </div>
 </div>
 

@@ -34,7 +34,7 @@ p {
 
 .main-home-banner 
 {
-    padding: 70px 0 0 0;
+    padding: 100px 0px;
     background: url(Child_Climbing_Ladder.jpg) center no-repeat;
     background-size: cover;
     color: #ffff;
@@ -1519,6 +1519,11 @@ ul.price-card2-list {
     .get-sol-btn {
         padding: 10px 15px;
     }
+
+    .main-home-banner {
+        padding-top: 50px !important;
+    }
+
 }
 
 @media only screen and (max-width: 317px)
