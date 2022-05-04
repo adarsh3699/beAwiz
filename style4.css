@@ -1505,16 +1505,17 @@ ul.price-card2-list {
 {
     .video-cont h3 
     {
-        margin-top: -4rem;
+        margin-top: -2rem;
     }
     .video-cont 
     {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
         margin: unset;
     }
     .video2-text 
     {
         margin-top: 0rem;
+        padding-top: 20px;
     }
 
     .sol-box-1 {
