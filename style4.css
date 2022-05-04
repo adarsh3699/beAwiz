@@ -34,11 +34,11 @@ p {
 
 .main-home-banner 
 {
-    margin-top: 40px;
-    padding: 200px 0 0 0;
+    margin-top: 7rem;
     background: url(Child_Climbing_Ladder.jpg) center no-repeat;
     background-size: cover;
     color: #ffff;
+    height: 500px;
 }
 
 .main-home-banner h1 {
@@ -82,7 +82,7 @@ p {
 
 .sol-cont-head h3 {
     font-size: 30px;
-    margin-top: 3rem;
+    margin-top: 4.5rem;
     line-height: 40px
 }
 
@@ -268,7 +268,7 @@ q {
 
 .testimonial-section {
     margin-top: 1.5rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
     background: #f5f5f5;
     padding-bottom: 3rem
 }
@@ -402,7 +402,8 @@ ul#footer-links li a {
         font-size: 33px;
     }
     .main-home-banner {
-        padding-bottom: 0
+        margin-top: 30px;
+        height: 400px;
     }
     .pricing-head h2 {
         font-size: 22px
@@ -1180,6 +1181,7 @@ ul.faq-list a {
 
     #video2-cont {
         padding-bottom: 43px;
+        margin-bottom: 20px;
     }
     
     .video2-text {
@@ -1466,8 +1468,21 @@ ul.price-card2-list {
 
 @media (max-width: 991px)
 {
+    .sol-cont-head h3 {
+        margin: unset;
+    }
+
     .sol-box-1{
         height: unset;
+    }
+
+    .video-cont {
+        margin: 20px 14px 0px 14px;
+        border-radius: 10px; 
+    }
+
+    .video-cont h3 {
+        font-size: 32px;
     }
 
 } 
@@ -1511,7 +1526,7 @@ ul.price-card2-list {
     }
 
     .main-home-banner {
-        padding-top: 50px !important;
+        height: 350px;
     }
 
 }
@@ -1519,14 +1534,21 @@ ul.price-card2-list {
 @media only screen and (max-width: 425px)
 {
     .main-home-banner {
-        margin: unset;
+        margin-top: 5rem;
+        height: 250px;
     }
 }
 
 @media only screen and (max-width: 362px)
 {
+        /* height: 250px; */
     .get-sol-btn {
         padding: 10px 15px;
+    }
+
+    .main-home-banner {
+        margin-top: 5rem;
+        height: 220px;
     }
 }
 

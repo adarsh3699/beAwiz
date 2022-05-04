@@ -184,17 +184,9 @@ include('OTPfunction.php');
 
 <!-- home banner -->
 <div class="main-home-banner" >
-    <div class="container">
-            <div class="banner-content">
-                <div class="banner-content-head">
-                    <!-- <h1>Integrating Learning with Emotional Preparedness</h1> -->
-                    </div>
-                    <div class="banner-content-content">
-                    <p style="font-size: 18px;"><span style="background-color: #2572b7"></span></p> 
-                </div> 
-                    <!-- <a href="#" data-toggle="modal" data-target="#myModal" class="btn-banner">Get Your Free Analysis Today</a> -->
-            </div>
-    </div>
+    <!-- <div class="container"> -->
+            <!-- <div class="banner-content"></div> -->
+    <!-- </div> -->
 </div>
 
 <!-- Content Starts  -->
@@ -353,7 +345,7 @@ include('OTPfunction.php');
 </div>
 
 <!-- video Section 2 -->
-<div class="video-section" style="margin-top: 4rem;">
+<div class="video-section" style="margin-top: 2rem;">
     <div class="container">
         <div class="row">
             <div id="video2-cont" class="col-md-6 video-cont">
