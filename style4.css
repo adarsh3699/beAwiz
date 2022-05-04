@@ -76,8 +76,8 @@ p {
 }
 
 .section-solutions {
-    padding-top: 3rem;
-    padding-bottom: 5rem
+    margin-top: 3rem;
+    margin-bottom: 1rem
 }
 
 .sol-cont-head h3 {
@@ -197,10 +197,6 @@ p {
     transition: .4s
 }
 
-.video-section {
-    margin-bottom: 4rem
-}
-
 .slideshow-container {
     position: relative
 }
@@ -271,6 +267,7 @@ q {
 }
 
 .testimonial-section {
+    margin-top: 1.5rem;
     padding-top: 3rem;
     background: #f5f5f5;
     padding-bottom: 3rem
@@ -298,6 +295,7 @@ ul#footer-links li {
 }
 
 .footer {
+    margin-top: 35px;
     padding-top: 40px;
     background: #062638;
     color: #fff
@@ -1174,7 +1172,6 @@ ul.faq-list a {
 @media only screen and (max-width:1199px) {
     .video-cont {
         padding-bottom: 37px;
-        margin-bottom: 20px;
     }
 
     .video-cont h3 {
