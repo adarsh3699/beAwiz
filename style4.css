@@ -1177,7 +1177,7 @@ ul.faq-list a {
 }
 @media only screen and (max-width:1199px) {
     .main-home-banner {
-        margin-top: 8rem;
+        margin-top: 7rem;
         height: 450px;
     }
 
@@ -1479,7 +1479,6 @@ ul.price-card2-list {
 @media (max-width: 991px)
 {
     .main-home-banner {
-
         height: 375px;
     }
 
@@ -1504,14 +1503,9 @@ ul.price-card2-list {
 
 @media (max-width: 768px)
 {
-    .navbar-right 
-    {
-        float: left!important;
-    }
     .video-cont h3 
     {
         margin-top: -4rem;
-        /* margin-bottom: 4rem; */
     }
     .video-cont 
     {
@@ -1541,17 +1535,10 @@ ul.price-card2-list {
     }
 
     .main-home-banner {
-        height: 350px;
+        height: 260px;
+        margin-top: 8rem;
     }
 
-}
-
-@media only screen and (max-width: 425px)
-{
-    .main-home-banner {
-        margin-top: 5rem;
-        height: 250px;
-    }
 }
 
 @media only screen and (max-width: 362px)
@@ -1562,8 +1549,7 @@ ul.price-card2-list {
     }
 
     .main-home-banner {
-        margin-top: 5rem;
-        height: 220px;
+        height: 190px;
     }
 }
 
