@@ -18,8 +18,9 @@ p {
 }
 
 .navbar-brand>img {
-    width: 65%;
-    margin-top: -10px
+    /* width: 65%; */
+    margin-top: -10px;
+    height: 40px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -30,6 +31,10 @@ p {
 
 .navbar {
     border-radius: 0!important
+}
+
+.navbar-right {
+    padding-right: 30px;
 }
 
 .main-home-banner 
@@ -1171,6 +1176,11 @@ ul.faq-list a {
     margin-top: -9rem
 }
 @media only screen and (max-width:1199px) {
+    .main-home-banner {
+        margin-top: 8rem;
+        height: 450px;
+    }
+
     .video-cont {
         padding-bottom: 37px;
     }
@@ -1468,6 +1478,11 @@ ul.price-card2-list {
 
 @media (max-width: 991px)
 {
+    .main-home-banner {
+
+        height: 375px;
+    }
+
     .sol-cont-head h3 {
         margin: unset;
     }
