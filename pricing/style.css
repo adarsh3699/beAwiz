@@ -1473,10 +1473,6 @@ ul.price-card2-list {
     .navbar-right {
         float: none !important;
     }
-
-    .price-img {
-        /* margin-left: 25px !important; */
-    }
 }
 
 @media (max-width: 991px) {
