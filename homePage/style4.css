@@ -30,15 +30,14 @@ p {
 }
 
 .navbar {
-    border-radius: 0!important
+    border-radius: 0 !important
 }
 
 .navbar-right {
     padding-right: 30px;
 }
 
-.main-home-banner 
-{
+.main-home-banner {
     margin-top: 7rem;
     background: url(Child_Climbing_Ladder.jpg) center no-repeat;
     background-size: cover;
@@ -49,8 +48,8 @@ p {
 .main-home-banner h1 {
     text-align: center;
     font-size: 40px;
-	color: #f1f1f1;
-	font-weight: 600;
+    color: #f1f1f1;
+    font-weight: 600;
     text-shadow: 2px 2px 4px #000;
 }
 
@@ -61,7 +60,7 @@ p {
 
 .banner-content-content {
     font-size: 18px;
-	font-weight: 300;
+    font-weight: 300;
     margin-bottom: 40px
 }
 
@@ -341,16 +340,20 @@ ul#footer-links li a {
         text-align: center;
         list-style: none
     }
+
     .video-cont {
-        background: 0 0!important
+        background: 0 0 !important
     }
+
     .video-cont h3 {
         color: #272626;
         font-size: 30px
     }
+
     .banner-content {
         margin-left: 2rem
     }
+
     .solutions-button-sec {
         display: flex;
         justify-content: space-around;
@@ -367,33 +370,42 @@ ul#footer-links li a {
     .sol-box {
         border-radius: 0
     }
+
     .section-solutions {
         padding-top: 0;
     }
+
     .social-links {
         float: none;
         margin-top: 0
     }
+
     .sol-cont-head h3 {
         text-align: center
     }
+
     .underline {
         display: none
     }
+
     .sol-cont-cont p {
         text-align: center
     }
+
     ul.social-icons li {
         margin-left: 10px
     }
+
     .footer {
         text-align: center
     }
+
     .home-contact-info-add,
     .home-contact-info-email,
     .home-contact-info-info {
         text-align: center
     }
+
     .video-btn {
         font-size: 18px;
         padding: 10px 30px;
@@ -401,26 +413,33 @@ ul#footer-links li a {
         border-radius: 6px;
         color: #fff
     }
+
     .banner-content-head h1 {
         margin-top: 0;
         font-size: 33px;
     }
+
     .main-home-banner {
         margin-top: 30px;
         height: 400px;
     }
+
     .pricing-head h2 {
         font-size: 22px
     }
+
     .home-contact-submit-btn {
         text-align: center
     }
+
     .video2-text {
-        color: #2a2a2a!important
+        color: #2a2a2a !important
     }
+
     .contact-banner {
-        background-size: contain!important
+        background-size: contain !important
     }
+
     .lear-port {
         padding-top: 15px
     }
@@ -489,7 +508,7 @@ ul.cont-det i {
     -webkit-animation: 100s scroll infinite linear;
     -moz-animation: 100s scroll infinite linear;
     -o-animation: 100s scroll infinite linear;
-    -ms-animation: 100s scroll infinite linear!important;
+    -ms-animation: 100s scroll infinite linear !important;
     animation: 100s scroll infinite linear
 }
 
@@ -685,7 +704,7 @@ table th {
 @media screen and (max-width:600px) {
 
     ul.learn-feature-list li {
-        line-height: 47px!important
+        line-height: 47px !important
     }
 
     .banner-content-head h1 {
@@ -700,7 +719,7 @@ table th {
 .price-tab-btn {
     padding: 5px 10px;
     background: #046190;
-    color: #fff!important;
+    color: #fff !important;
     border-radius: 5px;
     text-decoration: none
 }
@@ -935,17 +954,17 @@ ul.learn-feature-list li {
 }
 
 .nav-log-btn {
-    padding: 10px 30px 10px 30px!important;
-    background: #0077b3!important;
-    color: #fff!important;
-    margin-top: 5px!important;
-    border-radius: 6px!important;
-    margin-left: 5px!important
+    padding: 10px 30px 10px 30px !important;
+    background: #0077b3 !important;
+    color: #fff !important;
+    margin-top: 5px !important;
+    border-radius: 6px !important;
+    margin-left: 5px !important
 }
 
 .nav-log-btn:hover {
-    color: #fff!important;
-    background: #09567c!important
+    color: #fff !important;
+    background: #09567c !important
 }
 
 .login-input {
@@ -993,7 +1012,7 @@ ul.learn-feature-list li {
 
 @media (min-width:768px) {
     .navbar-right {
-        float: right!important;
+        float: right !important;
         margin-right: -15px;
         display: inline-flex
     }
@@ -1030,8 +1049,7 @@ ul.learn-feature-list li {
     padding-top: 10px
 }
 
-.dropdown button 
-{
+.dropdown button {
     font-size: 15px
 }
 
@@ -1174,6 +1192,7 @@ ul.faq-list a {
     color: #fff;
     margin-top: -9rem
 }
+
 @media only screen and (max-width:1199px) {
     .main-home-banner {
         margin-top: 7rem;
@@ -1192,71 +1211,71 @@ ul.faq-list a {
         padding-bottom: 43px;
         margin-bottom: 20px;
     }
-    
+
     .video2-text {
         padding: 4.5rem 0px;
     }
 }
 
 @media only screen and (max-width:768px) {
-    ul.faq-list li 
-    {
+    ul.faq-list li {
         display: block;
         margin-left: -40px;
         margin-bottom: 2px
     }
-    .gallery-main img 
-    {
-        height: 100%!important
+
+    .gallery-main img {
+        height: 100% !important
     }
-    .about-banner 
-    {
+
+    .about-banner {
         background-position: bottom;
         background-repeat: no-repeat;
-        background-image: url(../images/mob-abt.jpg)!important;
+        background-image: url(../images/mob-abt.jpg) !important;
     }
-    .floating 
-    {
+
+    .floating {
         background-size: contain
     }
-    .links-sec h4 
-    {
-        text-align: center!important;
+
+    .links-sec h4 {
+        text-align: center !important;
         margin-top: 15px
     }
-    .social-icons 
-    {
+
+    .social-icons {
         margin-right: -12px
     }
-    .contact-det 
-    {
+
+    .contact-det {
         margin-left: 0
     }
-    .signup-form 
-    {
-        width: 100%!important
+
+    .signup-form {
+        width: 100% !important
     }
-   
+
 }
-@media only screen and (min-width: 300px) and (max-width: 600px)
-{
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
     .learn-banner {
         background-color: #fff;
         padding: 45px 0 0 0;
         background-size: cover
     }
 }
-@media only screen and (min-width: 600px) and (max-width: 800px)
-{
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
     .about-banner {
-        padding: 21rem 0 85px  0!important;
-        background-image: url(../images/mob-abt.jpg)!important;
+        padding: 21rem 0 85px 0 !important;
+        background-image: url(../images/mob-abt.jpg) !important;
     }
-    .floating 
-    {
+
+    .floating {
         padding: 21rem 0 90px 0;
     }
 }
+
 .refund-main {
     padding: 25px
 }
@@ -1326,9 +1345,9 @@ ul.faq-list a {
 }
 
 .gallery-main img {
-   width: 75%;
-   height: 75%;
-   margin-bottom: 10px;
+    width: 75%;
+    height: 75%;
+    margin-bottom: 10px;
 }
 
 .pricing-card-header {
@@ -1475,8 +1494,7 @@ ul.price-card2-list {
     font-size: 23px
 }
 
-@media (max-width: 991px)
-{
+@media (max-width: 991px) {
     .main-home-banner {
         height: 375px;
     }
@@ -1485,34 +1503,32 @@ ul.price-card2-list {
         margin: unset;
     }
 
-    .sol-box-1{
+    .sol-box-1 {
         height: unset;
     }
 
     .video-cont {
         margin: 20px 14px 0px 14px;
-        border-radius: 10px; 
+        border-radius: 10px;
     }
 
     .video-cont h3 {
         font-size: 32px;
     }
 
-} 
+}
 
-@media (max-width: 768px)
-{
-    .video-cont h3 
-    {
+@media (max-width: 768px) {
+    .video-cont h3 {
         margin-top: -2rem;
     }
-    .video-cont 
-    {
+
+    .video-cont {
         padding-bottom: 1rem;
         margin: unset;
     }
-    .video2-text 
-    {
+
+    .video2-text {
         margin-top: 0rem;
         padding-top: 20px;
     }
@@ -1523,15 +1539,14 @@ ul.price-card2-list {
     }
 
 }
-@media (max-width: 600px)
-{
-    .navbar-right 
-    {
-        float: none!important;
+
+@media (max-width: 600px) {
+    .navbar-right {
+        float: none !important;
     }
-    .price-img
-    {
-        margin-left: 25px!important;
+
+    .price-img {
+        margin-left: 25px !important;
     }
 
     .main-home-banner {
@@ -1541,9 +1556,9 @@ ul.price-card2-list {
 
 }
 
-@media only screen and (max-width: 362px)
-{
-        /* height: 250px; */
+@media only screen and (max-width: 362px) {
+
+    /* height: 250px; */
     .get-sol-btn {
         padding: 10px 15px;
     }
@@ -1553,17 +1568,14 @@ ul.price-card2-list {
     }
 }
 
-@media only screen and (max-width: 317px)
-{
-    .navbar-brand 
-    {
+@media only screen and (max-width: 317px) {
+    .navbar-brand {
         padding: 15px 0px;
     }
 }
-@media only screen and (min-width: 600px) and (max-width: 991px)
-{
-    .solutions-button-sec 
-    {
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    .solutions-button-sec {
         display: flex;
         text-align: center;
         justify-content: space-around;
@@ -1574,35 +1586,40 @@ ul.price-card2-list {
         width: 40%;
     }
 
-    .its-for-you-main
-    {
+    .its-for-you-main {
         padding-top: 12rem;
     }
-    .terms-main , .privacy-main , .refund-main , .faq-main , .jobs-main , .media-main , .get-started-main
-    {
+
+    .terms-main,
+    .privacy-main,
+    .refund-main,
+    .faq-main,
+    .jobs-main,
+    .media-main,
+    .get-started-main {
         padding: 0;
     }
-    .syllabus-banner , .signup-banner
-    {
+
+    .syllabus-banner,
+    .signup-banner {
         padding: 135px 0 27px 0;
     }
 }
-.price-img
-{
+
+.price-img {
     width: 83%;
     margin-left: 5rem;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait)
-{
-    .youtube-video-iframe
-    {
-        height: 350px!important;
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
+    .youtube-video-iframe {
+        height: 350px !important;
     }
 }
-@media only screen and (max-width:700px)
-{
+
+@media only screen and (max-width:700px) {
     .youtube-video-iframe {
         width: 100%;
-        height: 215px!important
+        height: 215px !important
     }
 }

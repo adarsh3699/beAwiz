@@ -399,25 +399,23 @@ function calculate_pricingindex ()
 <!-- Prcing Feature Section -->
 <div class="pricing-feature-section">
     <div class="container">
-        <div class="row">
             <div class="price-fet-head">
                 <h2>Salient Features</h2>
             </div>
             <div class="learning-points">
                 <div class="col-md-8 lear-port">
-                <ul class="price-feature-list">
-                    <li class="Price-feature-bullets"><i class="fas fa-square-root-alt"></i>  Learning modules prepared by our expert panel of teachers</li>
-                    <li class="Price-feature-bullets"><i class="fas fa-swatchbook"></i> Unlimited attempts on each chapter to help you master the topic. </li>
-                    <li class="Price-feature-bullets"><i class="fas fa-question"></i> Personalized modules to cater to students from ICSE and CBSE with varying learning abilities</li>
-                    <li class="Price-feature-bullets"><i class="fas fa-hourglass-half"></i> Analytics algorithms will accurately and reliably assess student performance</li>
-                    <li class="Price-feature-bullets"><i class="fas fa-layer-group"></i> Unique 20 step learning model</li>
-                </ul>
+					<ul class="price-feature-list">
+						<li class="Price-feature-bullets"><i class="fas fa-square-root-alt"></i>  Learning modules prepared by our expert panel of teachers</li>
+						<li class="Price-feature-bullets"><i class="fas fa-swatchbook"></i> Unlimited attempts on each chapter to help you master the topic. </li>
+						<li class="Price-feature-bullets"><i class="fas fa-question"></i> Personalized modules to cater to students from ICSE and CBSE with varying learning abilities</li>
+						<li class="Price-feature-bullets"><i class="fas fa-hourglass-half"></i> Analytics algorithms will accurately and reliably assess student performance</li>
+						<li class="Price-feature-bullets"><i class="fas fa-layer-group"></i> Unique 20 step learning model</li>
+					</ul>
                 </div>
-                <div class="col-md-4">
-                   <img src="assets/images/pricing_img.svg" class="img-responsive price-img" alt="">
+                <div>
+                   <img src="pricing_img.svg" class="img-responsive price-img" alt="">
                 </div>
             </div>
-        </div>
     </div>
 </div>
 <!-- Footer -->

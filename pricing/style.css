@@ -704,17 +704,22 @@ table th {
     text-decoration: none
 }
 
-ul.price-feature-list li {
+.price-feature-list li {
     list-style: none;
     font-size: 15px;
-    line-height: 52px
+    line-height: 32px
 }
 
 .price-fet-head h2 {
     text-align: center
 }
 
+.Price-feature-bullets {
+    margin-bottom: 20px;
+}
+
 .Price-feature-bullets i {
+    padding-right: 5px;
     font-size: 20px;
     color: #046190
 }
@@ -877,6 +882,9 @@ select {
 }
 
 .learning-points {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 20px
 }
 
@@ -1467,9 +1475,21 @@ ul.price-card2-list {
     }
 
     .price-img {
-        margin-left: 25px !important;
+        /* margin-left: 25px !important; */
     }
 }
+
+@media (max-width: 991px) {
+    .learning-points {
+        display: block;
+    }
+
+    .price-img {
+        width: 50% !important;
+        margin: auto;
+    }
+}
+
 
 @media only screen and (max-width: 317px) {
     .navbar-brand {
@@ -1505,8 +1525,7 @@ ul.price-card2-list {
 }
 
 .price-img {
-    width: 83%;
-    margin-left: 5rem;
+    width: 100%;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
