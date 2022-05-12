@@ -139,43 +139,39 @@ if (isset($_SESSION['talentpage']))
 
 <!-- Page Contents -->
 <div class="get-started-main">
-    <div class="container">
-        <div class="row">
-            <div class="get-started-main-row">
-                <div class="get-image-main">
-                    <img src="getting_started.svg" class="img-responsive" alt="">
-                </div>
-                <div class="get-button-main">
-                    <a class="get-start-btn" href="#" data-toggle="modal" data-target="#myModal">Login to BeAwiz</a>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="get-image-main">
+		<img src="getting_started.svg" class="img-responsive" alt="">
+	</div>
+
+	<div class="get-button-main">
+		<a class="get-start-btn" href="#" data-toggle="modal" data-target="#myModal">Login to BeAwiz</a>
+	</div>
 </div>
 
-<div class="get-started-second-row">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="WizChild.svg" class="img-responsive" alt="">
-            </div>
-            <div class="col-md-8">
-                <p>Learning has never been this engaging where every student is progressively led to the top. Learning happens effectively when the learner is motivated and guided appropriately. Learner is motivated through integration of illustrations, questioning to promote critical thinking, and repetition to reinforce understanding. We call this learner empowerment.</p>
-            </div>
-        </div>
-    </div>
+<div class="get-started-row get-started-row-1">
+	<div class="content">
+		<div class="get-started-img-1">
+			<img src="WizChild.svg" class="img-responsive" alt="">
+		</div>
+		<div class= "get-started-text-1">
+				Learning has never been this engaging where every student is progressively led to the top.
+				Learning happens effectively when the learner is motivated and guided appropriately.
+				Learner is motivated through integration of illustrations, questioning to promote critical thinking, and repetition to reinforce understanding.
+				We call this learner empowerment.
+		</div>
+	</div>
 </div>
-<div class="get-started-third-row">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <p>Reporting system designed to identify the challenge areas of the student and gradually leading the student to learning excellence. We want children to have fun, think creatively and play like a champion along with excelling like a wiz in curriculum. Learning smart is our theme and this can happen only when the child is engaged, interested, and taken into confidence.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="combined_pic.jpg" class="img-responsive" alt="">
-            </div>
-        </div>
-    </div>
+<div class="get-started-row get-started-row-2">
+	<div class="content">
+		<div class= "get-started-text-2">
+				Reporting system designed to identify the challenge areas of the student and gradually leading the student to learning excellence.
+				We want children to have fun, think creatively and play like a champion along with excelling like a wiz in curriculum.
+				Learning smart is our theme and this can happen only when the child is engaged, interested, and taken into confidence.
+		</div>
+		<div class="get-started-img-2">
+			<img src="combined_pic.jpg" class="img-responsive" alt="">
+		</div>
+	</div>
 </div>
 <!-- Footer -->
 <div class="footer">
