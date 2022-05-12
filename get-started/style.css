@@ -1,0 +1,1538 @@
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Open Sans', sans-serif
+}
+
+p {
+    font-size: 15px
+}
+
+.navbar-default {
+    padding: 10px;
+    background: #fff;
+    border: none;
+    box-shadow: 3px -3px 4px 4px rgba(0, 0, 0, .09)
+}
+
+.navbar-brand>img {
+    /* width: 65%; */
+    margin-top: -10px;
+    height: 40px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #5a5a5a;
+    font-size: 15px;
+    font-weight: 400
+}
+
+.navbar {
+    border-radius: 0 !important
+}
+
+.navbar-right {
+    padding-right: 30px;
+}
+
+.main-home-banner {
+    padding: 115px 0 0 0;
+    background: url(../images/home-banner.jpg) center no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding-bottom: 7rem
+}
+
+.banner-content-head h1 {
+    font-size: 40px;
+    margin-top: 13rem
+}
+
+.banner-content {
+    margin-top: 6rem;
+    margin-bottom: 11rem
+}
+
+.banner-content-content {
+    font-size: 18px;
+    margin-bottom: 40px
+}
+
+.btn-banner {
+    background: #fff;
+    color: #000;
+    padding: 15px 35px;
+    border-radius: 6px;
+    font-size: 15px
+}
+
+.btn-banner:hover {
+    background: #2572b7;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s
+}
+
+.section-solutions {
+    padding-top: 3rem;
+    padding-bottom: 5rem
+}
+
+.sol-cont-head h3 {
+    font-size: 30px;
+    margin-top: 5rem;
+    line-height: 40px
+}
+
+.underline {
+    width: 68%;
+    display: block;
+    height: 4px;
+    background: #e02227
+}
+
+.sol-cont-cont p {
+    margin-top: 3rem;
+    font-size: 15px;
+    margin-bottom: 5rem
+}
+
+.sol-box {
+    padding: 25px;
+    background: #2d71b9;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    height: 155px;
+}
+
+.sol-box:hover {
+    background: #0c4888;
+    transition: .4s
+}
+
+.sol-box-ico i {
+    font-size: 40px;
+    margin-bottom: 10px
+}
+
+.how-sol-btn {
+    padding: 15px 35px;
+    background: #2d71b9;
+    color: #fff;
+    border-radius: 6px;
+    margin-right: 15px;
+    font-size: 15px
+}
+
+.how-sol-btn:hover {
+    text-decoration: none;
+    background: #033969;
+    color: #fff;
+    transition: .4s
+}
+
+.get-sol-btn {
+    padding: 15px 35px;
+    background: #183150;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 15px
+}
+
+.get-sol-btn:hover {
+    text-decoration: none;
+    background: #2d71b9;
+    color: #fff;
+    transition: .4s
+}
+
+.solutions-button-sec {
+    margin-bottom: 15px
+}
+
+.video-cont h3 {
+    font-size: 38px;
+    margin-top: 6rem;
+    text-align: center;
+    margin-bottom: 6rem;
+    color: #fff
+}
+
+.video-cont {
+    text-align: center;
+    background: #2d71b9;
+    padding-bottom: 7rem
+}
+
+.video-btn {
+    font-size: 15px;
+    padding: 10px 30px;
+    background: #fff;
+    color: #353535;
+    border-radius: 6px
+}
+
+.video-btn:hover {
+    text-decoration: none;
+    background: #033969;
+    color: #fff;
+    transition: .4s
+}
+
+.video-section {
+    margin-bottom: 4rem
+}
+
+.slideshow-container {
+    position: relative
+}
+
+.mySlides {
+    display: none;
+    padding: 15px;
+    text-align: center
+}
+
+.next,
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px
+}
+
+.next:hover,
+.prev:hover {
+    background-color: #e02227;
+    color: #fff
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    display: none
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active,
+.dot:hover {
+    background-color: #717171
+}
+
+q {
+    font-style: italic;
+    font-size: 15px
+}
+
+.author {
+    color: #0077b3;
+    margin-top: 2rem
+}
+
+.testimonial-section {
+    padding-top: 3rem;
+    background: #f5f5f5;
+    padding-bottom: 3rem
+}
+
+ul#footer-links li {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 5px
+}
+
+.links-sec {
+    text-align: center
+}
+
+.copyright {
+    border-top: 1px solid #ddd;
+    padding-top: 13px;
+    text-align: center
+}
+
+.copyright p {
+    font-size: 12px
+}
+
+.footer {
+    padding-top: 40px;
+    background: #062638;
+    color: #fff
+}
+
+.footer-img {
+    margin-left: -4px;
+    margin-bottom: 10px;
+}
+
+ul#footer-links li a {
+    color: #fff
+}
+
+.social-icons li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 26px;
+    color: #fff
+}
+
+.social-icons {
+    padding: 0;
+    margin-top: -10px;
+    margin-left: -3px
+}
+
+.contact-det {
+    margin-top: 1rem;
+    margin-left: 3rem
+}
+
+@media only screen and (max-width: 768px) {
+    ul#footer-links li {
+        display: block;
+        margin-left: 0;
+        font-size: 14px;
+        text-align: center;
+        list-style: none
+    }
+
+    .video-cont {
+        background: 0 0 !important
+    }
+
+    .video-cont h3 {
+        color: #272626;
+        font-size: 30px
+    }
+
+    .banner-content {
+        margin-left: 2rem
+    }
+
+    .solutions-button-sec {
+        display: flex;
+        text-align: center
+    }
+
+    .sol-box {
+        border-radius: 0
+    }
+
+    .section-solutions {
+        padding-top: 0;
+        padding-bottom: 3rem
+    }
+
+    .social-links {
+        float: none;
+        margin-top: 0
+    }
+
+    .sol-cont-head h3 {
+        text-align: center
+    }
+
+    .underline {
+        display: none
+    }
+
+    .sol-cont-cont p {
+        text-align: center
+    }
+
+    ul.social-icons li {
+        margin-left: 10px
+    }
+
+    .footer {
+        text-align: center
+    }
+
+    .home-contact-info-add,
+    .home-contact-info-email,
+    .home-contact-info-info {
+        text-align: center
+    }
+
+    .video-btn {
+        font-size: 18px;
+        padding: 10px 30px;
+        background: #07415f;
+        border-radius: 6px;
+        color: #fff
+    }
+
+    .banner-content-head h1 {
+        margin-top: 0;
+        font-size: 33px;
+    }
+
+    .main-home-banner {
+        padding-bottom: 0
+    }
+
+    .pricing-head h2 {
+        font-size: 22px
+    }
+
+    .home-contact-submit-btn {
+        text-align: center
+    }
+
+    .video2-cont {
+        color: #2a2a2a !important
+    }
+
+    .contact-banner {
+        background-size: contain !important
+    }
+
+    .lear-port {
+        padding-top: 15px
+    }
+}
+
+#footer-links,
+.cont-det {
+    padding: 0
+}
+
+.youtube-video-iframe {
+    width: 100%;
+    height: 294px
+}
+
+ul.cont-det li {
+    list-style: none
+}
+
+ul.cont-det li a {
+    color: #fff;
+    font-size: 12px
+}
+
+ul.cont-det i {
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 15px
+}
+
+.banner {
+    background-color: #0077b3
+}
+
+.banner-pricing {
+    background-color: #046190
+}
+
+.signup-banner {
+    padding: 85px 0 27px 0;
+    background-color: #0077b3;
+    color: #fff;
+    text-align: center
+}
+
+.syllabus-banner {
+    padding: 85px 0 27px 0;
+    background-color: #0077b3;
+    text-align: center;
+    color: #fff
+}
+
+.floating {
+    background-image: url(../images/float_circles.svg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150%;
+    width: 100%;
+    z-index: 1;
+    padding: 135px 0 70px 0;
+    -webkit-animation: 100s scroll infinite linear;
+    -moz-animation: 100s scroll infinite linear;
+    -o-animation: 100s scroll infinite linear;
+    -ms-animation: 100s scroll infinite linear !important;
+    animation: 100s scroll infinite linear
+}
+
+.floating h1 {
+    color: #fff;
+    text-align: center
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 0 -3000px
+    }
+}
+
+@-ms-keyframes scroll {
+    100% {
+        background-position: 0 -3000px
+    }
+}
+
+.founder-img {
+    text-align: center;
+    margin-top: 1rem
+}
+
+.about-main {
+    margin-top: 3rem
+}
+
+.about-content p {
+    font-size: 15px;
+    line-height: 30px
+}
+
+.about-content1 {
+    padding: 15px
+}
+
+.vision-mission p {
+    font-size: 15px;
+    line-height: 30px
+}
+
+.vsn {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 10px;
+    color: #757575;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px 0 #ddd
+}
+
+.msn {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 10px;
+    color: #757575;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px 0 #ddd
+}
+
+.belief-box {
+    padding: 25px;
+    margin-bottom: 1rem;
+    background: #f2f2f2
+}
+
+.belief-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem
+}
+
+.belief-head h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+    margin-left: 3rem
+}
+
+.about-content {
+    margin-left: 1rem
+}
+
+.its-for-you-main {
+    padding-top: 7rem;
+    padding-bottom: 15px
+}
+
+.its-for-you-main-head h2 {
+    margin-bottom: 25px
+}
+
+.rem-main-cont {
+    margin-left: 2rem
+}
+
+.faq-one {
+    background: #0077b3;
+    padding: 25px;
+    color: #fff
+}
+
+.faq-two {
+    background: #035d8a;
+    padding: 25px;
+    color: #fff
+}
+
+.faq-row p {
+    font-size: 15px;
+    line-height: 30px
+}
+
+.how-work-section {
+    padding-top: 20px;
+    padding-bottom: 15px
+}
+
+.how-main-head h2 {
+    text-align: center;
+    margin-bottom: 25px
+}
+
+.how-contents p {
+    line-height: 27px
+}
+
+.pricing-banner {
+    padding: 100px 0 50px 0;
+    background-image: url(https://storage.googleapis.com/adoninternet-sites/BeAwiz/Pricing.jpg);
+    color: #fff;
+    background-position: bottom;
+    background-size: cover
+}
+
+.price-page-head h1 {
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 6rem
+}
+
+.pricing-main {
+    padding-top: 30px;
+    padding-bottom: 45px
+}
+
+.pricing-head h2 {
+    text-align: center;
+    margin-bottom: 40px
+}
+
+.price-point-box {
+    padding: 20px;
+    background: #046190;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+    box-shadow: 3px 4px 4px 0 #9e9898cf;
+    border-radius: 5px
+}
+
+.pricing-table {
+    margin-top: 30px;
+    margin-bottom: 25px
+}
+
+table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+table tr {
+    border-bottom: 1px solid #c5c5c5;
+    padding: 5px
+}
+
+table td,
+table th {
+    padding: 10px;
+    text-align: center;
+    font-size: 15px
+}
+
+table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+@media screen and (max-width: 600px) {
+    ul.learn-feature-list li {
+        line-height: 47px !important
+    }
+}
+
+.pricing-feature-section {
+    margin-bottom: 25px
+}
+
+.price-tab-btn {
+    padding: 5px 10px;
+    background: #046190;
+    color: #fff !important;
+    border-radius: 5px;
+    text-decoration: none
+}
+
+.price-tab-btn:hover {
+    text-decoration: none;
+    background: #033969;
+    color: #fff;
+    text-decoration: none
+}
+
+.price-feature-list li {
+    list-style: none;
+    font-size: 15px;
+    line-height: 32px
+}
+
+.price-fet-head h2 {
+    text-align: center
+}
+
+.Price-feature-bullets {
+    margin-bottom: 20px;
+}
+
+.Price-feature-bullets i {
+    padding-right: 5px;
+    font-size: 20px;
+    color: #046190
+}
+
+.price-feature-list {
+    padding: 0
+}
+
+.home-contact input[type=text],
+input[type=email] {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    border-bottom: 1px solid #084a90;
+    border-top: none;
+    border-left: none;
+    border-right: none
+}
+
+input[type=email]:focus,
+input[type=text]:focus,
+textarea:focus {
+    outline: 0
+}
+
+textarea {
+    width: 100%;
+    border-bottom: 1px solid #084a90;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 15px
+}
+
+label {
+    color: #383838;
+    font-weight: 400;
+    margin-top: 5px
+}
+
+.home-contact-form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0 0 30px rgba(200, 196, 219, .3)
+}
+
+.home-contact {
+    margin-bottom: 25px;
+    margin-top: 25px
+}
+
+.home-cont-addr {
+    margin-top: 20px
+}
+
+.home-contact h1 {
+    margin-bottom: 20px
+}
+
+.home-contact-btn {
+    padding: 10px 15px;
+    background: #074d71;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.home-contact-btn:hover {
+    background: #053b57;
+    color: #fff;
+    text-decoration: none;
+    transition: .4s
+}
+
+.home-contact-info-add {
+    padding: 10px;
+    color: #5a4f4f;
+    margin-bottom: 10px
+}
+
+.home-contact-info-info {
+    padding: 10px;
+    color: #5a4f4f;
+    margin-bottom: 10px
+}
+
+.home-contact-info-email {
+    padding: 10px;
+    color: #5a4f4f
+}
+
+.contact-banner {
+    padding: 100px 0 50px 0;
+    background-image: url(../../assets/images/contact-us.png);
+    color: #fff;
+    background-size: cover
+}
+
+.contact-page-head h1 {
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 6rem
+}
+
+.learn-banner {
+    padding: 100px 0 50px 0;
+    background-image: url(../images/learn-2706897_1920.jpg);
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #989898;
+    text-shadow: 2px 2px 1px #636465;
+    margin-top: 7rem
+}
+
+.learn-page-head h1 {
+    text-align: center;
+    margin-bottom: 6rem;
+    margin-top: 2rem
+}
+
+select {
+    width: 100%;
+    height: 40px
+}
+
+.select-class-main {
+    padding-top: 30px;
+    padding-bottom: 25px
+}
+
+.le-find-test-btn {
+    padding: 10px 20px;
+    background: #649ad2;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px
+}
+
+.le-find-test-btn:hover {
+    background: #033969;
+    color: #ebebeb;
+    text-decoration: none
+}
+
+.select-option-le {
+    margin-bottom: 20px
+}
+
+.select-class-cont h4 {
+    text-align: center;
+    color: #585858;
+    margin-bottom: 30px
+}
+
+.select-class-cont {
+    padding: 40px;
+    background: #f2f2f2
+}
+
+.learning-points {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px
+}
+
+.learn-feature-list {
+    padding-left: 15px
+}
+
+ul.learn-feature-list li {
+    list-style: none;
+    font-size: 15px;
+    line-height: 58px
+}
+
+.test-det-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    transition: .3s;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 25px
+}
+
+.test-det-class-det {
+    background: #013854;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff
+}
+
+.test-det-buy-btn {
+    background: #0077b3;
+    padding: 20px
+}
+
+.test-det-buy-btn a {
+    color: #fff
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #404040
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #333;
+    background-color: #7979790f
+}
+
+.nav-log-btn {
+    padding: 10px 30px 10px 30px !important;
+    background: #0077b3 !important;
+    color: #fff !important;
+    margin-top: 5px !important;
+    border-radius: 6px !important;
+    margin-left: 5px !important
+}
+
+.nav-log-btn:hover {
+    color: #fff !important;
+    background: #09567c !important
+}
+
+.login-input {
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%
+}
+
+.sign-in-btn {
+    width: 100%;
+    margin-top: 10px;
+    height: 48px;
+    border-radius: 2px;
+    border: none;
+    background: #003c5a;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 7px
+}
+
+.sign-google {
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 2px;
+    border: 1px solid #4285f4;
+    background: #4285f4;
+    color: #fff;
+    font-size: 18px
+}
+
+.modal-brand-logo {
+    text-align: center;
+    margin-top: -3rem
+}
+
+.video2-cont {
+    margin-top: 7rem;
+    margin-bottom: 2.2rem;
+    font-size: 15px;
+    line-height: 28px;
+    color: #fff
+}
+
+@media (min-width: 768px) {
+    .navbar-right {
+        float: right !important;
+        margin-right: -15px;
+        display: inline-flex
+    }
+}
+
+.dropdown {
+    margin-top: 6px;
+    margin-left: 10px
+}
+
+.active-nav {
+    background-color: #7979790f
+}
+
+.company-details-main p {
+    font-size: 15px;
+    line-height: 30px
+}
+
+.misvis-img i {
+    font-size: 40px;
+    margin-top: 3rem;
+    margin-left: 1rem
+}
+
+.lear-port i {
+    font-size: 25px;
+    color: #313131
+}
+
+.lear-port {
+    color: #313131;
+    background: #f2f2f2;
+    padding-top: 10px
+}
+
+.dropdown button {
+    font-size: 15px
+}
+
+.pricing-card-main {
+    padding: 30px 0 15px 0;
+    background: #f5f5f5
+}
+
+.pricing-card {
+    padding: 10px 0 30px 0;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 15px;
+    border: 1px dotted #d6d6d6
+}
+
+.pricing-card-btn {
+    padding: 8px 30px;
+    background: #669bd3;
+    color: #fff;
+    border-radius: 5px
+}
+
+.pricing-chap-valid {
+    margin-bottom: 15px
+}
+
+.pricing-subject h3 {
+    font-weight: 600;
+    color: #fff
+}
+
+.syllabus-main {
+    padding-top: 20px;
+    padding-bottom: 25px
+}
+
+.panel-heading {
+    padding: 25px 15px
+}
+
+.jobs-main {
+    padding: 25px
+}
+
+.jobs-main p {
+    line-height: 25px
+}
+
+.jobs-main h2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #0077b3;
+    color: #fff
+}
+
+.terms-main {
+    padding: 25px
+}
+
+.terms-main p {
+    line-height: 25px;
+    font-size: 15px
+}
+
+.terms-main h2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #0077b3;
+    color: #fff;
+    font-size: 24px
+}
+
+.terms-main li {
+    font-size: 14px;
+    line-height: 25px
+}
+
+.privacy-main {
+    padding: 25px
+}
+
+.privacy-main p {
+    line-height: 25px;
+    font-size: 15px
+}
+
+.privacy-main h2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #0077b3;
+    color: #fff;
+    font-size: 24px
+}
+
+.privacy-main li {
+    font-size: 14px;
+    line-height: 25px
+}
+
+.faq-main {
+    padding: 25px
+}
+
+.faq-main p {
+    line-height: 25px
+}
+
+.faq-main h2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #0077b3;
+    color: #fff
+}
+
+.faq-main li {
+    font-size: 14px;
+    line-height: 25px
+}
+
+ul.faq-list li {
+    display: inline-block;
+    padding: 15px;
+    background: #0077b3;
+    color: #fff;
+    font-size: 16px
+}
+
+ul.faq-list {
+    text-align: center
+}
+
+ul.faq-list a {
+    color: #fff
+}
+
+.faq-banner {
+    padding: 100px 0 0 0;
+    background: #073a54;
+    color: #fff;
+    margin-top: -9rem
+}
+
+@media only screen and (max-width: 768px) {
+    ul.faq-list li {
+        display: block;
+        margin-left: -40px;
+        margin-bottom: 2px
+    }
+
+    .gallery-main img {
+        height: 100% !important
+    }
+
+    .about-banner {
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-image: url(../images/mob-abt.jpg) !important;
+    }
+
+    .floating {
+        background-size: contain
+    }
+
+    .links-sec h4 {
+        text-align: center !important;
+        margin-top: 15px
+    }
+
+    .social-icons {
+        margin-right: -12px
+    }
+
+    .contact-det {
+        margin-left: 0
+    }
+
+    .signup-form {
+        width: 100% !important
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .learn-banner {
+        background-color: #fff;
+        padding: 45px 0 0 0;
+        background-size: cover
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .about-banner {
+        padding: 21rem 0 85px 0 !important;
+        background-image: url(../images/mob-abt.jpg) !important;
+    }
+
+    .floating {
+        padding: 21rem 0 90px 0;
+    }
+}
+
+.refund-main {
+    padding: 25px
+}
+
+.refund-main p {
+    line-height: 25px;
+    font-size: 15px
+}
+
+.refund-main h2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #0077b3;
+    color: #fff;
+    font-size: 24px
+}
+
+.get-card {
+    padding: 10px;
+    background: #0077b3;
+    color: #fff
+}
+
+.get-started-main {
+    padding: 20px
+}
+
+.get-start-btn {
+    padding: 15px 35px;
+    background: #183150;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 15px
+}
+
+.get-button-main {
+    text-align: center
+}
+
+.get-image-main {
+    margin-bottom: 4rem
+}
+
+.get-started-second-row p {
+    margin-top: 7rem;
+    line-height: 35px;
+    font-size: 15px
+}
+
+.get-started-second-row {
+    padding-top: 3rem;
+    padding-bottom: 3rem
+}
+
+.get-started-third-row p {
+    line-height: 30px;
+    font-size: 15px
+}
+
+.get-started-third-row {
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+.media-main {
+    padding: 25px
+}
+
+.gallery-main img {
+    width: 75%;
+    height: 75%;
+    margin-bottom: 10px;
+}
+
+.pricing-card-header {
+    padding: 10px;
+    margin: 20px;
+    background: #046190;
+    color: #fff
+}
+
+.subpage-banner {
+    padding: 100px 0 0 0;
+    background: #073a54;
+    color: #fff
+}
+
+.price-card2-head {
+    color: #fff;
+    text-align: center;
+    background: #046190;
+    padding: 10px
+}
+
+.price-card2-head h2 {
+    margin-top: 10px;
+    font-size: 20px
+}
+
+.price-card2-head h3 {
+    font-size: 20px
+}
+
+.price-card-2 {
+    padding: 10px;
+    background: #ececee;
+    margin-bottom: 20px
+}
+
+.price-card-circle {
+    border-radius: 50%;
+    background: #046190;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    border: 5px solid #fff;
+    margin-top: 1rem
+}
+
+.price-card-circle h1 {
+    padding-top: 22px;
+    font-weight: 600;
+    font-size: 26px
+}
+
+ul.price-card2-list li {
+    list-style: none;
+    font-size: 15px;
+    line-height: 30px;
+    border-top: 1px solid #cecece
+}
+
+ul.price-card2-list {
+    padding: 0;
+    margin: 0;
+    text-align: center
+}
+
+.price-card2-list-sec {
+    margin-top: 1rem
+}
+
+.price-card2-button {
+    text-align: center;
+    margin-top: 1rem
+}
+
+.price-card2-btn {
+    background: #046190;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px
+}
+
+.links-sec h4 {
+    text-align: left;
+    margin-bottom: 15px
+}
+
+.signup-main {
+    padding: 35px 0 35px 0
+}
+
+.signup-form {
+    width: 40%;
+    padding: 15px;
+    background: #f9f9f9;
+    margin: 0 auto
+}
+
+.goo-btn {
+    margin-top: 10px;
+    background: #d9534f;
+    color: #fff;
+    margin-bottom: 10px
+}
+
+.btn {
+    font-size: 16px
+}
+
+.sub-btn {
+    background: #003c5a;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 5px
+}
+
+.rupee {
+    font-size: 22px;
+    font-weight: 600;
+    padding-right: 2px
+}
+
+.about-banner {
+    background-image: url(../images/AboutUs1.jpg);
+    padding: 135px 0 70px 0;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-size: cover
+}
+
+.test-details-main {
+    padding: 25px
+}
+
+.belief-sub-head h3 {
+    font-size: 23px
+}
+
+@media (max-width: 768px) {
+    .navbar-right {
+        float: left !important;
+    }
+
+    .video-cont h3 {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .video-cont {
+        padding-bottom: 2rem;
+    }
+
+    .video2-cont {
+        margin-top: 0rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-right {
+        float: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .learning-points {
+        display: block;
+    }
+
+    .price-img {
+        width: 50% !important;
+        margin: auto;
+    }
+}
+
+
+@media only screen and (max-width: 317px) {
+    .navbar-brand {
+        padding: 15px 0px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .solutions-button-sec {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .its-for-you-main {
+        padding-top: 12rem;
+    }
+
+    .terms-main,
+    .privacy-main,
+    .refund-main,
+    .faq-main,
+    .jobs-main,
+    .media-main,
+    .get-started-main {
+        padding: 0;
+    }
+
+    .syllabus-banner,
+    .signup-banner {
+        padding: 135px 0 27px 0;
+    }
+}
+
+.price-img {
+    width: 100%;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
+    .youtube-video-iframe {
+        height: 350px !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .youtube-video-iframe {
+        width: 100%;
+        height: 215px !important
+    }
+}
