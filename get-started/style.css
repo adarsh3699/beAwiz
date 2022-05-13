@@ -1289,14 +1289,6 @@ ul.faq-list a {
     
 }
 
-.get-started-row-1 {
-    /* background-image: linear-gradient(270deg,#fff 20%,#b8aeae 80%); */
-}
-
-.get-started-row-2 {
-    /* background-image: linear-gradient(270deg,#b8aeae 20%,#fff 80%); */
-}
-
 .content {
     display: flex;
     align-items: center;

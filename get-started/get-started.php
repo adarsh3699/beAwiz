@@ -148,7 +148,7 @@ if (isset($_SESSION['talentpage']))
 	</div>
 </div>
 
-<div class="get-started-row get-started-row-1">
+<div class="get-started-row">
 	<div class="content">
 		<div class="get-started-img-1">
 			<img src="WizChild.svg" class="img-responsive" alt="">
@@ -161,7 +161,7 @@ if (isset($_SESSION['talentpage']))
 		</div>
 	</div>
 </div>
-<div class="get-started-row get-started-row-2">
+<div class="get-started-row">
 	<div class="content">
 		<div class= "get-started-text-2">
 				Reporting system designed to identify the challenge areas of the student and gradually leading the student to learning excellence.
