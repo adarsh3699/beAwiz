@@ -285,7 +285,7 @@ ul#footer-links li {
     font-size: 12px
 }
 
-.footer {
+#footer {
     padding-top: 40px;
     background: #062638;
     color: #fff
@@ -375,7 +375,7 @@ ul#footer-links li a {
         margin-left: 10px
     }
 
-    .footer {
+    #footer {
         text-align: center
     }
 

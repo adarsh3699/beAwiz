@@ -285,7 +285,7 @@ ul#footer-links li {
     font-size: 12px
 }
 
-.footer {
+#footer {
     padding-top: 40px;
     background: #062638;
     color: #fff
@@ -375,7 +375,7 @@ ul#footer-links li a {
         margin-left: 10px
     }
 
-    .footer {
+    #footer {
         text-align: center
     }
 
@@ -1256,44 +1256,65 @@ ul.faq-list a {
 }
 
 .get-started-main {
-    padding: 20px
+    margin: 20px 0 20px 0;
+    /* background-color: rgb(184, 174, 174); */
+    background-image: linear-gradient(270deg,#b8aeae 20%,#fff 80%);
+    padding: 3rem 2rem 3rem 2rem;
 }
 
 .get-start-btn {
-    padding: 15px 35px;
-    background: #183150;
     color: #fff;
-    border-radius: 6px;
-    font-size: 15px
 }
 
 .get-button-main {
-    text-align: center
+    text-align: center;
+    padding: 15px 35px;
+    background: #183150;
+    border-radius: 6px;
+    font-size: 15px;
+    width: fit-content;
+    margin: auto;
 }
 
 .get-image-main {
     margin-bottom: 4rem
 }
 
-.get-started-second-row p {
-    margin-top: 7rem;
-    line-height: 35px;
-    font-size: 15px
-}
-
-.get-started-second-row {
+.get-started-row {
+    margin: 20px 0 20px 0;
     padding-top: 3rem;
-    padding-bottom: 3rem
+    padding-bottom: 3rem;
+    /* background-color: rgb(206, 199, 199); */
+    background-color: #e9e3e3;
+    
 }
 
-.get-started-third-row p {
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5% 10px 5%;
+}
+
+.get-started-text-1, .get-started-text-2 {
     line-height: 30px;
-    font-size: 15px
+    font-size: 18px;
+    width: 80%;
 }
 
-.get-started-third-row {
-    padding-top: 2rem;
-    padding-bottom: 2rem
+.get-started-text-1 {
+    padding-left: 40px;
+    padding-right: 10px;
+    
+}
+.get-started-text-2 {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.get-started-img-1, .get-started-img-2 {
+    width: 30%;
+    margin: auto;
 }
 
 .media-main {
@@ -1450,7 +1471,53 @@ ul.price-card2-list {
     font-size: 23px
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+    .learning-points {
+        display: block;
+    }
+
+    .price-img {
+        width: 50% !important;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .solutions-button-sec {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .its-for-you-main {
+        padding-top: 12rem;
+    }
+
+    .terms-main,
+    .privacy-main,
+    .refund-main,
+    .faq-main,
+    .jobs-main,
+    .media-main {
+        padding: 0;
+    }
+
+    .get-started-main {
+        padding: 20px 10px 20px 10px;
+        border-radius: unset;
+    }
+
+    .syllabus-banner,
+    .signup-banner {
+        padding: 135px 0 27px 0;
+    }
+}
+
+.price-img {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
     .navbar-right {
         float: left !important;
     }
@@ -1467,61 +1534,55 @@ ul.price-card2-list {
     .video2-cont {
         margin-top: 0rem;
     }
+
+    /* for get-start Page */
+    .content {
+        display: block;
+        text-align: center;
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    .get-started-text-1, .get-started-text-2, .get-started-img-1, .get-started-img-2 {
+        margin: auto;
+        width: 90%;
+        padding: unset;
+        font-size: 15px;
+    }
+    
+    .get-started-text-1{
+        margin-top: 20px;
+    }
+
+    .get-started-text-2 {
+        margin-bottom: 20px;
+    }
+
+    .get-started-img-1, .get-started-img-2 {
+        width: 40%;
+    }
 }
 
 @media (max-width: 600px) {
     .navbar-right {
         float: none !important;
     }
-}
 
-@media (max-width: 991px) {
-    .learning-points {
-        display: block;
-    }
-
-    .price-img {
-        width: 50% !important;
-        margin: auto;
+    .get-started-img-1, .get-started-img-2 {
+        width: 50%;
     }
 }
 
+@media (max-width: 500px) {
+    .get-started-img-1, .get-started-img-2 {
+        width: 60%;
+    }
+}
 
 @media only screen and (max-width: 317px) {
     .navbar-brand {
         padding: 15px 0px;
     }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 800px) {
-    .solutions-button-sec {
-        display: block;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .its-for-you-main {
-        padding-top: 12rem;
-    }
-
-    .terms-main,
-    .privacy-main,
-    .refund-main,
-    .faq-main,
-    .jobs-main,
-    .media-main,
-    .get-started-main {
-        padding: 0;
-    }
-
-    .syllabus-banner,
-    .signup-banner {
-        padding: 135px 0 27px 0;
-    }
-}
-
-.price-img {
-    width: 100%;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
