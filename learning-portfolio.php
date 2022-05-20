@@ -3,83 +3,44 @@ ob_start();
 session_start();
 include('dbconfig.php');
 include('OTPfunction.php');
+if (isset($_SESSION['talentpage']))
+	unset($_SESSION['talentpage']);
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js">
 <head>
-    <!-- Google SignIn and Google Search metaname-->
-	<meta name="google-site-verification" content="M-I4B9bVO5aGPhtqL-RxaqgF5ORb6wceO7nQ-HiBOwM" />
-	<title>Integrating Mood and Learning</title>
+	<!-- Google metasearch -->
 	<meta name="Keywords" content="Help in Maths, Adaptive learning, Learning Maths Online, Maths Test, Maths Worksheets, Teacher Online, Maths Tutor, Self Learn Maths, Math Practice, NCERT Online, Exam Papers, ICSE, CBSE, online maths tutions,personalised learning, practice tests">
-    <meta name="Description" content="Be A Wiz is a learning tool that uses the Socratic method of learning to take the student incrementally to the highest level of understanding">
-	<meta property="og:title" content="Adaptive Learning Blocks" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://beawiz.com/home" />
-	<meta property="og:image" content="https://beawiz.com/images/hometestbanner.jpg" />
+    <meta name="Description" content="Be A Wiz offers computer-based online adaptive learning blocks designed to master the concepts and practice to perfection. These blocks adapt student's action to stimulate their minds and incrementally take them to highest levels of conceptual understanding through regular instructions. Learn More!">
 	
-	<!-- structured data -->
-	<script type="application/ld+json">
-	{
-	"@context": "https://schema.org/",
-	"@type": "WebSite",
-	"name": "Be A Wiz Education",
-	"url": "https://beawiz.com",
-	"address": "Bangalore, India",
-    "sameAs": [
-      "https://www.facebook.com/beawiz",
-      "https://twitter.com/beAwiz2017",
-      "https://www.linkedin.com/company/beawizeducation/",
-	  "https://www.instagram.com/beawiz2017/"
-    ],
-	"potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://beawiz.com/home{search_term_string}",
-    "query-input": "required name=search_term_string"
-					}
-	}
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106556349-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', 'UA-106556349-1');
 	</script>
-	
-	<meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="856532918346-vmk7j58b2pnrg3rr97a8tmn1262dchej.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-	<!-- Google SignIn and search meta name ends -->
 	
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
+    <title>Learning Portfolio - BeAwiz</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="assets/images/favicon.png">
-	<link rel="canonical" href="https://beawiz.com/home"/>
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel='stylesheet' href='bootstrap.css'>
-    <link rel='stylesheet' href='style4.css'>
-    <link rel='stylesheet' href='assets/css/font-awesome.css'>
+    <link rel='stylesheet' href='css/bootstrap.css'>
+    <link rel='stylesheet' href='css/style.css'>
 	
-	<!-- Facebook Pixel Code 
-	<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '516592038738971');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=516592038738971&ev=PageView&noscript=1"
-   /></noscript>
-   -- End Facebook Pixel Code -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script>
 	function OTPFunction() {
 		var userID = document.getElementById("userid").value;
@@ -114,10 +75,10 @@ include('OTPfunction.php');
    </script>
 </head>
 <body>
-<?php include_once("analyticstracking.php") ?>
+
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
-    <!-- <div class="container"> -->
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -126,7 +87,7 @@ include('OTPfunction.php');
                     <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="home">
-             <img src="logo.png"  alt="Learning Ladder">
+             <img src="img/logo.png"  alt="logo">
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -136,9 +97,8 @@ include('OTPfunction.php');
               <li><a href="about-us">About Us</a></li>
               <li><a href="its-for-you">Its For You</a></li>
               <li><a href="pricing">Pricing</a></li>
-              <li><a href="learning-portfolio">Learning Portfolio</a></li>
-              <li><a href="contact">Contact</a></li>
-              <!-- <li><a href="#" data-toggle="modal" data-target="#myModal"  class="nav-log-btn">Login</a></li> -->
+              <li class="active-nav"><a href="learning-portfolio">Learning Portfolio</a></li>
+              <li><a href="contact">Contact</a></li>   
 			  
 			   <?php
 					if(!isset($_SESSION['uname'])){ 
@@ -164,7 +124,7 @@ include('OTPfunction.php');
 				$uid = $arr['id'];
 				
 			   ?>
-			  
+			   
               <div class="dropdown dropdown-myaccount">
                 <button style="width: 100%;" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">My Account
                 <span class="caret"></span></button>
@@ -173,188 +133,59 @@ include('OTPfunction.php');
                   <li><a href="logout">Logout</a></li>
                 </ul>
               </div>
-			   <?php
+			  <?php
 				}
 			   ?>
-			  
             </ul>
        </div>
-    <!-- </div> -->
+    </div>
 </nav>
 
-<!-- home banner -->
-<div class="main-home-banner" >
-    <!-- <div class="container"> -->
-            <!-- <div class="banner-content"></div> -->
-    <!-- </div> -->
-</div>
-
-<!-- Content Starts  -->
-<div class="section-solutions">
+<!-- banner -->
+<div class="learn-banner">
     <div class="container">
         <div class="row">
-            <div class="sol-content-main">
-                <div class="col-md-6">
-                    <div class="sol-cont-head">
-                        <h3>A unique learning experience to help you climb the ladder of success</h3>
-                    </div>
-                    <div class="underline"></div>
-                    <div class="sol-cont-cont">
-                        <p>Become a Math Wiz For Class 6, Class 7, Class 8</p>
-                    </div>
-                    <div class="solutions-button-sec">
-                        <a href="get-started" class="get-sol-btn">How it Works</a>
-                        <a data-toggle="modal" data-target="#myModal" class="get-sol-btn">Get Started for Free</a>
-                    </div>
-                </div>
-            </div>
-            <div class="sol-box-points">
-                <div class="col-md-6">
-                    <div class="col-md-6 sol-box-1">
-                        <div class="sol-box-ico">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <div class="sol-box-cont">
-                            <p>Build Confidence</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 sol-box-1">
-                        <div class="sol-box-ico">
-                            <i class="fas fa-book-reader"></i>
-                        </div>
-                        <div class="sol-box-cont">
-                            <p>Faster Learning</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 sol-box-1">
-                        <div class="sol-box-ico">
-                           <!--  <i class="fas fa-user-graduate"></i> -->
-						   <i class="fas fa-running"></i>
-                        </div>
-                        <div class="sol-box-cont">
-                            <p>Develop Resilience</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 sol-box-1">
-                        <div class="sol-box-ico">
-                            <i class="fas fa-portrait"></i>
-                        </div>
-                        <div class="sol-box-cont">
-                            <p>Create Self Awareness</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="learn-page-head">
+                <h1>Learning Portfolio</h1>
             </div>
         </div>
     </div>
 </div>
 
-<!-- video Section -->
-<div class="video-section">
+<!-- Page Contents -->
+<div class="select-class-main">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 video-section">
-                <iframe class="youtube-video-iframe" src="https://www.youtube.com/embed/sPqsNof8UOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
-            </div>
-            <div class="col-md-6 video-cont">
-                <h3>Converging Mood Index & Screen Wellness with Learning</h3>
-                <a href="its-for-you" class="video-btn">Learn More</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Content Starts  -->
-<div class="section-solutions">
-    <div class="container">
-        <div class="row">
-            <div class="sol-box-points">
-                <div class="col-md-6">
-                    <div class="col-md-6 sol-box-1">
-                        <div class="sol-box-ico">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="sol-box-cont">
-                            <p>Unique 20 Step Learning Model</p>
-                        </div>
+            <div class="select-class-row">
+                <div class="select-class-cont">
+                    <h4>Master the concepts and get ahead in school with Be A Wiz. Sign up today and take a TRIAL to get started !</h4>
+                    <div class="select-option-le">
+                        <select name="" id="">
+                            <option value="">Select Your Class</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                        </select>
                     </div>
-                    <div class="col-md-6 sol-box-1">
-                        <div class="sol-box-ico">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="sol-box-cont">
-                            <p>Mood Analysis for better Learning</p>
-                        </div>
+                    <a href="pricing" class="le-find-test-btn">Find Learning Modules</a>
+                </div>
+				<a href="syllabus"><h4>View Topics Covered in our Learning Modules</h4></a>
+				
+                <div class="learning-points">
+                    <div class="col-md-6 lear-port">
+                    <ul class="learn-feature-list">
+                        <li class="Price-feature-bullets"><i class="fas fa-square-root-alt"></i> Offer adaptive learning modules for Mathematics for classes 6 to 8</li>
+                        <li class="Price-feature-bullets"><i class="fas fa-swatchbook"></i> Covers both ICSE &amp; CBSE syllabus and encompasses all key topics</li>
+                        <li class="Price-feature-bullets"><i class="fas fa-question"></i> A single session can have a maximum of 35 questions</li>
+                        <li class="Price-feature-bullets"><i class="fas fa-layer-group"></i> Session ends when student reaches the highest level</li>
+                        <li class="Price-feature-bullets"><i class="fas fa-hourglass-half"></i> Maximum allotted time for each session is 90 minutes</li>
+                    </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <iframe style="width: 100%; height: 310px;" src="https://www.youtube.com/embed/xmLL_mItnSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
-            </div>
-            <div class="sol-box-points">
-                <div class="col-md-6">
-                    <div class="col-md-6 sol-box-1">
-                        <div class="sol-box-ico">
-                            <i class="fas fa-spa"></i>
-                        </div>
-                        <div class="sol-box-cont">
-                            <p>Screen Wellness</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 sol-box-1">
-                        <div class="sol-box-ico">
-                            <i class="fas fa-hands-helping"></i>
-                        </div>
-                        <div class="sol-box-cont">
-                            <p>Stimulate the learner's mind</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Testimonial Section -->
-<div class="testimonial-section">
-    <div class="container">
-        <div class="row">
-            <div class="testi-head">
-                <h1 class="text-center">Testimonials</h1>
-            </div>
-            <div class="slideshow-container">
-                <div class="mySlides">
-                    <q>We appreciate the good work of Be A Wiz Education with our students. Many of our students are finding this tool very useful and this has increased their enthusiasm in learning math. This tool is helping them understand concepts better and provides personal attention.</q>
-                    <p class="author">- Ms. Deepika, Principal</p>
-                </div>
-                <div class="mySlides">
-                    <q>I have been using Be A wiz for learning math for the past few months. I find this very useful since it helps me understand concepts & problems where I have difficulty in understanding. This tool has helped to identify my difficulty areas and put focus on them.</q>
-                    <p class="author">- Yuktha. M, Class 8</p>
-                </div>
-                <div class="mySlides">
-                    <q>My daughter has been using Be A wiz for math learning. The best part of this tool is that it is able to adapt with the student and helps them correct their difficulty areas. All other tools I have used are a plain series of questions but this one is very different </q>
-                    <p class="author">- Mrs. Mahesh, parent of Priya Mahesh</p>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-            </div>
-            <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span> 
-                    <span class="dot" onclick="currentSlide(2)"></span> 
-                    <span class="dot" onclick="currentSlide(3)"></span> 
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- video Section 2 -->
-<div class="video-section" style="margin-top: 2rem;">
-    <div class="container">
-        <div class="row">
-            <div id="video2-cont" class="col-md-6 video-cont">
-                <p class="video2-text">More hours of screen time are associated with lower well-being in ages 2 to 17. Many learning solutions encourage more and more use of the screen. Hence we need a breakthrough that brings forth the best of technology-based learning and conventional learning</p>
-                <!--<a href="https://www.sciencedirect.com/science/article/pii/S2211335518301827" target="_blank" class="video-btn">Read more</a>-->
-				<a href="its-for-you" target="_blank" class="video-btn">Read more</a>
-            </div>
-            <div class="col-md-6 video-sec">
-                <iframe class="youtube-video-iframe" src="https://www.youtube.com/embed/H373A-YK8ew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
             </div>
         </div>
     </div>
@@ -373,7 +204,7 @@ include('OTPfunction.php');
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Login</h4>
                     <div class="modal-brand-logo">
-                        <img src="assets/images/logo.png" alt="Learning Ladder" style="width: 30%;">
+                        <img src="assets/images/logo.png" style="width: 30%;">
                     </div>
                 </div>
 				
@@ -383,7 +214,6 @@ include('OTPfunction.php');
 						<label class="sr-only" for="userid">Email or Phone Number</label>
 						<input type="text" class="form-control" id="userid" name="userid" placeholder="Email or Phone Number" required>
 						</div>
-						
 						<!-- button to add OTP -->
 						<div>
 						<button type="button" form="login-nav" onClick="OTPFunction()" class="button" id="OTPlogin">Generate OTP</button>
@@ -392,7 +222,7 @@ include('OTPfunction.php');
 						or
 						<div class="form-group">
 						<label class="sr-only" for="password">Password</label>
-						<input type="password" class="form-control" id="password" name="password" placeholder="Password/OTP" required>
+						<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                         <div class="help-block text-right"><a href="forgotpassword">Forgot the password ?</a></div>
 						</div>
 						<div class="form-group sign-button-sec">
@@ -400,7 +230,7 @@ include('OTPfunction.php');
 						</div>
 				</form>
 				
-					<?php
+				<?php
 						if(isset($_POST['signin'])){
 						$userid = trim($_POST['userid']);
 						$passin = trim($_POST['password']);
@@ -420,10 +250,11 @@ include('OTPfunction.php');
 								$uid = 0;
 								//$query2 = mysqli_query($conn, 'SELECT * FROM profile WHERE phone_number = "'.$userid.'"');
 								$stmt = $conn->prepare("SELECT * FROM profile WHERE phone_number =  ?");
-								$stmt->bind_param("s", $userid);
+								$userid1 = intval($userid);
+								$stmt->bind_param("i", $userid1);
 								$stmt->execute();
 								$res_ = $stmt->get_result();
-								if($res_->num_rows > 0)
+								if($res_->num_rows > 0 && $userid1 != 0)
 								{
 								//$row = mysqli_fetch_array($query2);
 								$numrowflag = true;
@@ -670,22 +501,24 @@ include('OTPfunction.php');
 								
 								} 
 						}
-								 ?>
+				?>
 								 
                         <p class="text-center">or</p>
                         <div class="google-button-sec">
                             <button class="sign-google">
                                 <div class="goo-img">
 									<a href="social?provider=Google">
-                                    <img src="assets/images/google-img.jpg" alt="Learning Ladder">
+                                    <img src="assets/images/google-img.jpg" alt="">
                                     <font color="FFFFFF">Login with Google</font>
 									</a>
                                 </div>
                             </button>
                         </div>
                     </div>
-				<div class="modal-body" class="text-center" id="tid">
+               
+			    <div class="modal-body" class="text-center" id="tid">
 					</div>
+					
                 <div class="modal-footer">
                     <p class="text-center">New here ? <a href="sign-up">Sign Up</a></p>
                 </div>
@@ -693,34 +526,9 @@ include('OTPfunction.php');
         </div>
     </div>
 </div>
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-        
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
-    }
-       function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-    }
-</script>   
+	
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
-<script src="../footer.js"></script>
+<script src="footer.js"></script>
 </body>
 </html>

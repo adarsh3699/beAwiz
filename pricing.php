@@ -5,16 +5,59 @@ include('dbconfig.php');
 include('OTPfunction.php');
 if (isset($_SESSION['talentpage']))
 	unset($_SESSION['talentpage']);
+
+function calculate_pricingindex () 
+{
+	    // priceindex -1 indicates user to login
+		// priceindex -2 indicates user pack already active
+		// priceundex - 3 indicates user to Buy
+		// priceindex -4 indicates error
+		
+		$priceindex = 4; //default value
+		include ('dbconfig.php');
+		if(!isset($_SESSION['uname'])){ 
+			$priceindex = 1;  }
+		
+		elseif(isset($_SESSION['uname']))
+		{
+	  		$userid = $_SESSION['id'];
+	  		$vcheck = mysqli_query($conn, "SELECT * FROM enrollment WHERE user_id = $userid AND enroll_status != 'limit' AND enroll_type = 'Paid'");
+	  		if(mysqli_num_rows($vcheck)==0)
+					$priceindex = 3;
+			else {
+	  			while($vres = mysqli_fetch_array($vcheck)){
+	  				$expiry = new DateTime($vres['expiry']);
+				}
+				$date = new DateTime(date('Y-m-d'));
+				if($date < $expiry)
+					 $priceindex =2;
+				 else
+					 $priceindex = 3;
+				} 	
+		}
+		return $priceindex;
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-    <!-- Google Metasearch -->
+    <!-- Google Meta Search -->
 	<meta name="Keywords" content="Help in Maths, Adaptive learning, Learning Maths Online, Maths Test, Maths Worksheets, Teacher Online, Maths Tutor, Self Learn Maths, Math Practice, NCERT Online, Exam Papers, ICSE, CBSE, online maths tutions,personalised learning, practice tests">
     <meta name="Description" content="Be A Wiz offers computer-based online adaptive learning blocks designed to master the concepts and practice to perfection. These blocks adapt student's action to stimulate their minds and incrementally take them to highest levels of conceptual understanding through regular instructions. Learn More!">
-    <!-- Basic Page Needs -->
+    
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106556349-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', 'UA-106556349-1');
+	</script>
+	
+	<!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>Get Started - BeAwiz</title>
+    <title>Pricing - BeAwiz</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,12 +68,12 @@ if (isset($_SESSION['talentpage']))
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel='stylesheet' href='bootstrap.css'>
-    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/bootstrap.css'>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script>
 	function OTPFunction() {
 		var userID = document.getElementById("userid").value;
         var phoneno = /^\d{10}$/;
@@ -64,9 +107,10 @@ if (isset($_SESSION['talentpage']))
    </script>
 </head>
 <body>
-
+<?php include_once("analyticstracking.php") ?>
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- <div class="container"> -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -75,7 +119,7 @@ if (isset($_SESSION['talentpage']))
                     <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="home">
-             <img src="logo.png"  alt="logo">
+             <img src="img/logo.png"  alt="logo">
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -87,11 +131,11 @@ if (isset($_SESSION['talentpage']))
               <li class="active-nav"><a href="pricing">Pricing</a></li>
               <li><a href="learning-portfolio">Learning Portfolio</a></li>
               <li><a href="contact">Contact</a></li>
-
+			  
 			   <?php
 					if(!isset($_SESSION['uname'])){ 
 			   ?>
-			     <!-- <li><a href="#" data-toggle="modal" data-target="#myModal"  class="nav-log-btn">Login</a></li> -->
+              <!-- <li><a href="#" data-toggle="modal" data-target="#myModal"  class="nav-log-btn">Login</a></li> -->
               <div class="dropdown">
                 <button style="width: 100%;" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Login
                 <span class="caret"></span></button>
@@ -103,14 +147,14 @@ if (isset($_SESSION['talentpage']))
               </div>
 			  
 			  <?php
-			   }
-			   else 
-			   {
-			   	$name = $_SESSION['uname'];
-				$check = mysqli_query($conn, 'SELECT * FROM users WHERE uname = "'.$name.'"');
-				$arr = mysqli_fetch_array($check);
-				$uid = $arr['id'];
-				
+				}
+				else 
+				{
+					$name = $_SESSION['uname'];
+					$check = mysqli_query($conn, 'SELECT * FROM users WHERE uname = "'.$name.'"');
+					$arr = mysqli_fetch_array($check);
+					$uid = $arr['id'];
+					
 			   ?>
 			   
               <div class="dropdown dropdown-myaccount">
@@ -126,54 +170,256 @@ if (isset($_SESSION['talentpage']))
 			   ?>
             </ul>
        </div>
+    <!-- </div> -->
 </nav>
 
 <!-- banner -->
-<div class="banner">
+<div class="banner-pricing">
 	<div class="floating">
-        <h1>Get Started</h1>
+        <h1>Pricing</h1>
     </div>	
 </div>
 
 <!-- Page Contents -->
-<div class="get-started-main">
-	<div class="get-image-main">
-		<img src="getting_started.svg" class="img-responsive" alt="">
-	</div>
-
-	<div class="get-button-main">
-		<a class="get-start-btn" href="#" data-toggle="modal" data-target="#myModal">Login to BeAwiz</a>
-	</div>
+<div class="pricing-main">
+    <div class="container">
+        <div class="row">
+            <div class="pricing-head">
+                <h2>
+                        You pay only for the topics you need and get unlimited attempts.
+                </h2>
+            </div>
+            <div class="pricing-point-contents">
+                <div class="col-md-3">
+                    <div class="price-point-box">
+                        <div class="price-ico">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="price-cont">
+                            <p>Flexible, affordable pricing system</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price-point-box">
+                        <div class="price-ico">
+                            <i class="fas fa-donate"></i>
+                        </div>
+                        <div class="price-cont">
+                            <p>Pay only for the chapters you need</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price-point-box">
+                        <div class="price-ico">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <div class="price-cont">
+                            <p>Access any chapter upon payment</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3">
+                    <div class="price-point-box">
+                        <div class="price-ico">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="price-cont">
+                            <p>Get unlimited attempts on each chapter.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="get-started-row">
-	<div class="content">
-		<div class="get-started-img-1">
-			<img src="WizChild.svg" class="img-responsive" alt="">
-		</div>
-		<div class= "get-started-text-1">
-				Learning has never been this engaging where every student is progressively led to the top.
-				Learning happens effectively when the learner is motivated and guided appropriately.
-				Learner is motivated through integration of illustrations, questioning to promote critical thinking, and repetition to reinforce understanding.
-				We call this learner empowerment.
-		</div>
-	</div>
+<?php 
+  $pindex = calculate_pricingindex();
+  $lprice = sha1(19900);
+  $fprice = sha1(94900);
+  $sprice = sha1(194900);
+  if(isset($_SESSION['uname']))
+  {
+	  	$userid = $_SESSION['id'];
+	  	$vcheck = mysqli_query($conn, "SELECT * FROM enrollment WHERE user_id = $userid AND enroll_status != 'limit' AND enroll_type = 'Paid'");
+		if(mysqli_num_rows($vcheck) > 0) 
+		{
+	  		while($vres = mysqli_fetch_array($vcheck))
+			{
+				$_SESSION['tpack_id'] = $vres['tpack_id'];
+				$_SESSION['grade'] = $vres['grade'];
+			}
+			
+		}
+		mysqli_free_result($vcheck);
+ }
+  ?>
+<!-- Pricing Cards -->
+<div class="pricing-card-section2">
+    <div class="container">
+        <div class="row">
+               <div class="col-md-4">
+                   <div class="price-card-2">
+                       <div class="price-card2-head">
+                           <h2>Mathematics</h2>
+                           <h3> ICSE/CBSE</h3>
+                       </div>
+                       <div class="price-card-circle">
+                           <!-- <h1>FREE</h1> -->
+						   <h1><i class="rupee fa fa-rupee-sign"></i>FREE</h1>
+                       </div>
+                       <div class="price-card2-list-sec">
+                           <ul class="price-card2-list">
+                               <li>Class 6,7,8</li>
+                               <li>1 Chapter</li>
+                               <li>Validity: NA</li>
+                           </ul>
+                       </div>
+					   <?php
+					      if($pindex == 1){  ?>
+                       <div class="price-card2-button">
+                           <button data-toggle="modal" data-target="#myModal" class="price-card2-btn">Login</button>
+                       </div>
+						  <?php  } 
+						  elseif($pindex == 2)  {  
+						  ?>
+					        <div class="price-card2-button">
+                          <!-- <button class="price-card2-btn" onclick="home">ACTIVE</button> -->
+						   <a href="dashboard/dashboard"><button type="button" class="price-card2-btn">Active User</button></a>
+							</div>
+						  <?php  }
+						  elseif($pindex == 3)  {  
+						  ?>
+						   <div class="price-card2-button">
+						   <a href="dashboard/dashboard"><button type="button" class="price-card2-btn">FREE MODULE</button></a>
+						   <!-- <a href="confirm-order?cat=<?php echo $lprice; ?>"><button type="button" class="price-card2-btn"> Join Talent Program</button></a> -->
+							</div>
+						  <?php  }
+						  elseif($pindex == 4)  {  
+						  ?>
+						  <div class="price-card2-button">
+						   <a href="#"><button type="button" class="price-card2-btn">Error</button></a>
+							</div>
+						  <?php  }  ?>
+						
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="price-card-2">
+                       <div class="price-card2-head">
+                           <h2>Mathematics</h2>
+                           <h3> ICSE/CBSE</h3>
+                       </div>
+                       <div class="price-card-circle">
+                           <h1><i class="rupee fa fa-rupee-sign"></i>949</h1>
+                       </div>
+                       <div class="price-card2-list-sec">
+                           <ul class="price-card2-list">
+                               <li>Class 6,7,8</li>
+                               <li>2 Chapters</li>
+                               <li>Validity: 1 Month</li>
+                           </ul>
+                       </div>
+                        <?php
+					      if($pindex == 1){  ?>
+                       <div class="price-card2-button">
+                           <button data-toggle="modal" data-target="#myModal" class="price-card2-btn">Login</button>
+                       </div>
+						  <?php  } 
+						  elseif($pindex == 2)  {  
+						  ?>
+					        <div class="price-card2-button">
+                          <!-- <button class="price-card2-btn" onclick="home">ACTIVE</button> -->
+						   <a href="dashboard/dashboard"><button type="button" class="price-card2-btn">Active User</button></a>
+							</div>
+						  <?php  }
+						  elseif($pindex == 3)  {  
+						  ?>
+						   <div class="price-card2-button">
+						   <a href="confirm-order?cat=<?php echo $fprice; ?>"><button type="button" class="price-card2-btn">Buy</button></a>
+							</div>
+						  <?php  }
+						  elseif($pindex == 4)  {  
+						  ?>
+						  <div class="price-card2-button">
+						   <a href="#"><button type="button" class="price-card2-btn">Error</button></a>
+							</div>
+						  <?php  }  ?>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="price-card-2">
+                       <div class="price-card2-head">
+                           <h2>Mathematics</h2>
+                           <h3> ICSE/CBSE</h3>
+                       </div>
+                       <div class="price-card-circle">
+                           <h1><i class="rupee fa fa-rupee-sign"></i>1949</h1>
+                       </div>
+                       <div class="price-card2-list-sec">
+                           <ul class="price-card2-list">
+                               <li>Class 6,7,8</li>
+                               <li>8 Chapters</li>
+                               <li>Validity: 12 Months</li>
+                           </ul>
+                       </div>
+                         <?php
+					      if($pindex == 1){  ?>
+                       <div class="price-card2-button">
+                           <button data-toggle="modal" data-target="#myModal" class="price-card2-btn">Login</button>
+                       </div>
+						  <?php  } 
+						  elseif($pindex == 2)  {  
+						  ?>
+					        <div class="price-card2-button">
+                          <!-- <button class="price-card2-btn" onclick="home">ACTIVE</button> -->
+						   <a href="dashboard/dashboard"><button type="button" class="price-card2-btn">Active User</button></a>
+							</div>
+						  <?php  }
+						  elseif($pindex == 3)  {  
+						  ?>
+						   <div class="price-card2-button">
+						   <a href="confirm-order?cat=<?php echo $sprice; ?>"><button type="button" class="price-card2-btn">Buy</button></a>
+							</div>
+						  <?php  }
+						  elseif($pindex == 4)  {  
+						  ?>
+						  <div class="price-card2-button">
+						   <a href="#"><button type="button" class="price-card2-btn">Error</button></a>
+							</div>
+						  <?php  }  ?>
+                   </div>
+               </div>
+        </div>
+    </div>
 </div>
-<div class="get-started-row">
-	<div class="content">
-		<div class= "get-started-text-2">
-				Reporting system designed to identify the challenge areas of the student and gradually leading the student to learning excellence.
-				We want children to have fun, think creatively and play like a champion along with excelling like a wiz in curriculum.
-				Learning smart is our theme and this can happen only when the child is engaged, interested, and taken into confidence.
-		</div>
-		<div class="get-started-img-2">
-			<img src="combined_pic.jpg" class="img-responsive" alt="">
-		</div>
-	</div>
+
+<!-- Prcing Feature Section -->
+<div class="pricing-feature-section">
+    <div class="container">
+            <div class="price-fet-head">
+                <h2>Salient Features</h2>
+            </div>
+            <div class="learning-points">
+                <div class="col-md-8 lear-port">
+					<ul class="price-feature-list">
+						<li class="Price-feature-bullets"><i class="fas fa-square-root-alt"></i>  Learning modules prepared by our expert panel of teachers</li>
+						<li class="Price-feature-bullets"><i class="fas fa-swatchbook"></i> Unlimited attempts on each chapter to help you master the topic. </li>
+						<li class="Price-feature-bullets"><i class="fas fa-question"></i> Personalized modules to cater to students from ICSE and CBSE with varying learning abilities</li>
+						<li class="Price-feature-bullets"><i class="fas fa-hourglass-half"></i> Analytics algorithms will accurately and reliably assess student performance</li>
+						<li class="Price-feature-bullets"><i class="fas fa-layer-group"></i> Unique 20 step learning model</li>
+					</ul>
+                </div>
+                <div>
+                   <img src="pricing_img.svg" class="img-responsive price-img" alt="">
+                </div>
+            </div>
+    </div>
 </div>
 <!-- Footer -->
 <div id="footer"></div>
-
 <!-- Login Modal -->
 <div class="container">
     <div class="modal fade" id="myModal" role="dialog">
@@ -194,6 +440,7 @@ if (isset($_SESSION['talentpage']))
 						<label class="sr-only" for="userid">Email or Phone Number</label>
 						<input type="text" class="form-control" id="userid" name="userid" placeholder="Email or Phone Number" required>
 						</div>
+						
 						<!-- button to add OTP -->
 						<div>
 						<button type="button" form="login-nav" onClick="OTPFunction()" class="button" id="OTPlogin">Generate OTP</button>
@@ -230,10 +477,11 @@ if (isset($_SESSION['talentpage']))
 								$uid = 0;
 								//$query2 = mysqli_query($conn, 'SELECT * FROM profile WHERE phone_number = "'.$userid.'"');
 								$stmt = $conn->prepare("SELECT * FROM profile WHERE phone_number =  ?");
-								$stmt->bind_param("s", $userid);
+								$userid1 = intval($userid);
+								$stmt->bind_param("i", $userid1);
 								$stmt->execute();
 								$res_ = $stmt->get_result();
-								if($res_->num_rows > 0)
+								if($res_->num_rows > 0 && $userid1 != 0)
 								{
 								//$row = mysqli_fetch_array($query2);
 								$numrowflag = true;
@@ -488,14 +736,14 @@ if (isset($_SESSION['talentpage']))
                                 <div class="goo-img">
 									<a href="social?provider=Google">
                                     <img src="assets/images/google-img.jpg" alt="">
-                                    Login with Google
+                                    <font color="FFFFFF">Login with Google</font>
 									</a>
                                 </div>
                             </button>
                         </div>
                     </div>
 					
-				<div class="modal-body" class="text-center" id="tid">
+					<div class="modal-body" class="text-center" id="tid">
 					</div>
 					
                 <div class="modal-footer">
@@ -506,7 +754,7 @@ if (isset($_SESSION['talentpage']))
     </div>
 </div>
 <script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="../footer.js"></script>
+<script src="footer.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 </body>
 </html>
