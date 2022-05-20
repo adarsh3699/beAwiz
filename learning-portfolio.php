@@ -78,7 +78,6 @@ if (isset($_SESSION['talentpage']))
 
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -96,14 +95,14 @@ if (isset($_SESSION['talentpage']))
               <li><a href="home">Home</a></li>
               <li><a href="about-us">About Us</a></li>
               <li><a href="its-for-you">Its For You</a></li>
-              <li><a href="pricing">Pricing</a></li>
-              <li class="active-nav"><a href="learning-portfolio">Learning Portfolio</a></li>
-              <li><a href="contact">Contact</a></li>   
-			  
+              <li class="active-nav"><a href="pricing">Pricing</a></li>
+              <li><a href="learning-portfolio">Learning Portfolio</a></li>
+              <li><a href="contact">Contact</a></li>
+
 			   <?php
 					if(!isset($_SESSION['uname'])){ 
 			   ?>
-			   
+			     <!-- <li><a href="#" data-toggle="modal" data-target="#myModal"  class="nav-log-btn">Login</a></li> -->
               <div class="dropdown">
                 <button style="width: 100%;" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Login
                 <span class="caret"></span></button>
@@ -114,7 +113,7 @@ if (isset($_SESSION['talentpage']))
                 </ul>
               </div>
 			  
-			   <?php
+			  <?php
 			   }
 			   else 
 			   {
@@ -133,12 +132,11 @@ if (isset($_SESSION['talentpage']))
                   <li><a href="logout">Logout</a></li>
                 </ul>
               </div>
-			  <?php
+			   <?php
 				}
 			   ?>
             </ul>
        </div>
-    </div>
 </nav>
 
 <!-- banner -->
@@ -167,19 +165,21 @@ if (isset($_SESSION['talentpage']))
                             <option value="">8</option>
                         </select>
                     </div>
-                    <a href="pricing" class="le-find-test-btn">Find Learning Modules</a>
+					<div id="find-test-btn-area">
+						<a href="pricing" class="le-find-test-btn">Find Learning Modules</a>
+					</div>
                 </div>
-				<a href="syllabus"><h4>View Topics Covered in our Learning Modules</h4></a>
+				<a href="syllabus"><div id="viewTopics">View Topics Covered in our Learning Modules</div></a>
 				
                 <div class="learning-points">
                     <div class="col-md-6 lear-port">
-                    <ul class="learn-feature-list">
-                        <li class="Price-feature-bullets"><i class="fas fa-square-root-alt"></i> Offer adaptive learning modules for Mathematics for classes 6 to 8</li>
-                        <li class="Price-feature-bullets"><i class="fas fa-swatchbook"></i> Covers both ICSE &amp; CBSE syllabus and encompasses all key topics</li>
-                        <li class="Price-feature-bullets"><i class="fas fa-question"></i> A single session can have a maximum of 35 questions</li>
-                        <li class="Price-feature-bullets"><i class="fas fa-layer-group"></i> Session ends when student reaches the highest level</li>
-                        <li class="Price-feature-bullets"><i class="fas fa-hourglass-half"></i> Maximum allotted time for each session is 90 minutes</li>
-                    </ul>
+						<ul class="learn-feature-list">
+							<li class="Price-feature-bullets"><i class="fas fa-square-root-alt"></i> Offer adaptive learning modules for Mathematics for classes 6 to 8</li>
+							<li class="Price-feature-bullets"><i class="fas fa-swatchbook"></i> Covers both ICSE &amp; CBSE syllabus and encompasses all key topics</li>
+							<li class="Price-feature-bullets"><i class="fas fa-question"></i> A single session can have a maximum of 35 questions</li>
+							<li class="Price-feature-bullets"><i class="fas fa-layer-group"></i> Session ends when student reaches the highest level</li>
+							<li class="Price-feature-bullets"><i class="fas fa-hourglass-half"></i> Maximum allotted time for each session is 90 minutes</li>
+						</ul>
                     </div>
                     <div class="col-md-6">
                         <iframe style="width: 100%; height: 310px;" src="https://www.youtube.com/embed/xmLL_mItnSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
