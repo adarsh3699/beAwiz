@@ -406,10 +406,6 @@ ul#footer-links li a {
         font-size: 22px
     }
 
-    .home-contact-submit-btn {
-        text-align: center
-    }
-
     .video2-cont {
         color: #2a2a2a !important
     }
@@ -562,7 +558,6 @@ ul.cont-det i {
 .belief-head h1 {
     margin-bottom: 3rem;
     text-align: center;
-    margin-left: 3rem
 }
 
 .about-content {
@@ -751,7 +746,8 @@ textarea {
     border-top: none;
     border-left: none;
     border-right: none;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    resize: vertical;
 }
 
 label {
@@ -779,15 +775,16 @@ label {
     margin-bottom: 20px
 }
 
-.home-contact-btn {
+#submit-btn {
     padding: 10px 15px;
     background: #074d71;
     color: #fff;
     border-radius: 6px;
     font-size: 15px;
+    margin-top: 10px;
 }
 
-.home-contact-btn:hover {
+#submit-btn:hover {
     background: #053b57;
     color: #fff;
     text-decoration: none;
@@ -1187,6 +1184,16 @@ ul.faq-list a {
     margin-top: -9rem
 }
 
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+    .faq-one, .faq-two {
+        height: 320px;
+    }
+    
+    .belief-box {
+        height: 200px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     ul.faq-list li {
         display: block;
@@ -1450,14 +1457,6 @@ ul.price-card2-list {
 
 .btn {
     font-size: 16px
-}
-
-.sub-btn {
-    background: #003c5a;
-    color: #fff;
-    padding: 12px;
-    font-size: 16px;
-    margin-bottom: 5px
 }
 
 .rupee {

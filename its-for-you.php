@@ -1,20 +1,15 @@
 <?php
-	ob_start();
-	session_start();
-	include('dbconfig.php');
-	include('OTPfunction.php');
-	if (isset($_SESSION['talentpage']))
-		unset($_SESSION['talentpage']);
-
-	// Import PHPMailer classes into the global namespace
-	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
-	require 'vendor/autoload.php';
+ob_start();
+session_start();
+include('dbconfig.php');
+include('OTPfunction.php');
+if (isset($_SESSION['talentpage']))
+	unset($_SESSION['talentpage']);
 ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-    <!-- Google Metasearch -->
+    <!-- Google MetaSearch entries -->
 	<meta name="Keywords" content="Help in Maths, Adaptive learning, Learning Maths Online, Maths Test, Maths Worksheets, Teacher Online, Maths Tutor, Self Learn Maths, Math Practice, NCERT Online, Exam Papers, ICSE, CBSE, online maths tutions,personalised learning, practice tests">
     <meta name="Description" content="Be A Wiz offers computer-based online adaptive learning blocks designed to master the concepts and practice to perfection. These blocks adapt student's action to stimulate their minds and incrementally take them to highest levels of conceptual understanding through regular instructions. Learn More!">
 	
@@ -30,7 +25,7 @@
 	
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>Contact - BeAwiz</title>
+    <title>Its For You - BeAwiz</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,15 +33,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="assets/images/favicon.png">
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- CSS -->
     <link rel='stylesheet' href='css/bootstrap.css'>
     <link rel='stylesheet' href='css/style.css'>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script>
 	function OTPFunction() {
 		var userID = document.getElementById("userid").value;
         var phoneno = /^\d{10}$/;
@@ -83,7 +78,6 @@
 <?php include_once("analyticstracking.php") ?>
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -92,7 +86,7 @@
                     <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="home">
-             <img src="assets/images/logo.png"  alt="logo">
+             <img src="img/logo.png"  alt="logo">
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -100,13 +94,13 @@
 			  <!-- <li><a href="talentprogram2021"><strong>Tatent Program 2021</strong></a></li> -->
               <li><a href="home">Home</a></li>
               <li><a href="about-us">About Us</a></li>
-              <li><a href="its-for-you">Its For You</a></li>
+              <li class="active-nav"><a href="its-for-you">Its For You</a></li>
               <li><a href="pricing">Pricing</a></li>
               <li><a href="learning-portfolio">Learning Portfolio</a></li>
-              <li class="active-nav"><a href="contact">Contact</a></li>
+              <li><a href="contact">Contact</a></li>
               <!-- <li><a href="#" data-toggle="modal" data-target="#myModal"  class="nav-log-btn">Login</a></li> -->
 			  
-			    <?php
+			   <?php
 					if(!isset($_SESSION['uname'])){ 
 			   ?>
 			   
@@ -128,9 +122,8 @@
 				$check = mysqli_query($conn, 'SELECT * FROM users WHERE uname = "'.$name.'"');
 				$arr = mysqli_fetch_array($check);
 				$uid = $arr['id'];
-				
 			   ?>
-              <div class="dropdown dropdown-myaccount">
+              <div class="dropdown dropdown-myaccount" >
                 <button style="width: 100%;" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">My Account
                 <span class="caret"></span></button>
                 <ul class="dropdown-menu">
@@ -138,85 +131,113 @@
                   <li><a href="logout">Logout</a></li>
                 </ul>
               </div>
-			   <?php
+			  <?php
 				}
 			   ?>
             </ul>
        </div>
-    </div>
 </nav>
 
 <!-- banner -->
-<div class="banner">
-	<div class="floating">
-        <h1>Contact Us</h1>
-    </div>	
-</div>
-
-<!-- Page Contents -->
-<div class="home-contact">
+<!-- <div class="subpage-banner">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 home-cont-addr">
-               <div class="col-md-6 home-contact-info-add">
-                        <h1>Address</h1>
-                        <p>Be A Wiz Education</p> 
-                        <p>JP Nagar 6th Phase</p> 
-                        <p>Bangalore</p>   
-                        <p>Pin : 560078</p>
-                </div>
-                <div class="col-md-6 home-contact-info-info">
-                        <h3 style="margin-bottom: 20px; margin-top: 28px;"> Phone Number</h3>         
-                        <p><i class="fas fa-phone"></i> +91-8943600513</p>  
-                        <h3 style="margin-bottom: 20px;">Email</h3>
-                        <p><i class="fas fa-envelope"></i> contact@beawiz.com </p>    
+            <div class="page-head">
+                <h1>Its For You</h1>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- <div class="banner">
+	<div class="floating">
+        <h1>Its For You</h1>
+    </div>	
+</div> -->
+<!-- Page Contents -->
+
+<div class="its-for-you-main">
+    <div class="container">
+        <div class="row">
+            <div class="its-for-you-main-head">
+                <h2 class="text-center">Education is about Power and Change</h2>
+            </div>
+            <div class="its-you-video">
+                <div class="col-md-6">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/F6ERh9fgNGQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-md-6 home-contact-form">
-                <form method="post">
-                    <div class="col-md-6">
-                        <label>Name</label>
-                        <input type="text"  name="fullname">
-                        <label>Email</label>
-                        <input type="email" name="email">
+            <div class="its-main-contents">
+                <div class="col-md-6">
+                    <div class="rowtext">
+                        <p><b>Where does Be A Wiz get its inspiration from?</b></p>
+                        <p>The oldest and still one of the most powerful teaching method is the Socratic method.  This method is a style of education based on asking and answering questions to stimulate critical thinking and to draw out ideas and underlying presumptions. </p>
+                        <br>
+                        <p><b>What is the Be A Wiz learning model?</b></p>
+                        <p>Be A Wiz is based on a unique 20 step learning model where students learn by attempting a series of learning modules of varying difficulty. This is a analogous to a child learning to climb stairs and may stumble along the way but eventually reaches the top.  Our score at the end of each learning session is only indicative of student's learning ladder and guides the student to the top over several attempts.</p>
+                        <br>
                     </div>
-                    <div class="col-md-6">
-                        <label>Phone Number</label>
-                        <input type="text" name="mobile" >
-                        <label>Subject</label>
-                        <input type="text" name="subject">
-                    </div>
-                    <div class="col-md-12">
-                        <label>Message</label>
-                        <textarea name="message" cols="30" rows="10"></textarea>
-                       <!-- <div class="home-contact-submit-btn">
-                           <a href="#" class="home-contact-btn">Submit</a>
-                        </div> -->
-					</div>
-					
-					<div>
-						<input 
-							type="submit" 
-							class="g-recaptcha" 
-							id="submit-btn" 
-							name="submit" 
-							value="Send Message"
-							data-sitekey="6LfjWBsgAAAAAOJ-lPNYr1OSSe0TZeKgurskKXy1" 
-							data-callback='onSubmit' 
-							data-action='submit'
-						>
-                    </div>
-                </form>
-	
+                </div>
+                <div class="rem-main-cont">
+                    <p><b>What is mood analysis and how is it related to learning?</b></p>
+                    <p> This is a psychometry analysis of the learners presence and application of mind, thought during the time of learning. At Be A Wiz we strongly believe that learning is sensory in nature and intelligence is malleable. With self awareness, a learner will be able to improve learning outcomes. We measure 5 parameters namely, Attentiveness, Calmness, Grit, Progression and Observance. Take a trial session to see how this is done.</p>
+                    <br>
+					<p><b>What is the advantage of enrolling in Be A Wiz?</b></p>
+                    <p> Children make mistakes when they lack conceptual understanding or when they have not practiced enough. Be A Wiz provides an environment coupled with constant guidance, feedback and support motivates students to persist and gain mastery over topics.</p>
+                    <br>
+                    <p><b>Is this another set of tests that will put students under stress?</b></p>
+                    <p>Our modules are crafted to delight and engage the students. The Be A Wiz learning experience is student-driven and boosts inspiration, motivates students and enhances the confidence of all learners. In fact, our goal is to turn students into a wiz without them having go through a plethora of practice sheets.</p>
+					<br>
+					<p><b>Can this be used by teachers in schools and how does it help teachers?</b></p>
+					<p>Be A Wiz is based proven scientific learning models to identify difficulty areas of students and provide targeted instructions to a student. BE A Wiz assists the teacher to provide personalized attention to students and the content is aligned with ICSE/CBSE syllabus.</p>
+					<br>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- FAQ -->
+<div class="its-faq">
+    <div class="container">
+        <div class="row">
+            <div class="faq-row">
+                <div class="col-md-6 faq-one">
+                    <h3 style="line-height: 28px;">How is this adaptive method different from classroom methods?</h3>
+                    <p>Learning patterns vary widely across students and the learning pace of two students is never the same. For this reason learning can be stimulated by presenting appropriate learning materials in terms of complexity of the problem or application of the concept.</p>
+                </div>
+                <div class="col-md-6 faq-two">
+                    <h3>Why and who should enroll into Be A Wiz?</h3>
+                    <p>Our differentiated learning blocks cater to a diverse set of learners. We challenge a fluent learner and make them outstanding. We take the intermediate learner to higher fluency levels. The beginner learner is led to take the progressive steps of learning. Our intuitive scoring system lets you visualize your progress.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How does this work Section -->
+<div class="how-work-section">
+    <div class="container">
+        <div class="row">
+            <div class="how-main-head">
+                <h2>How Does this work ?</h2>
+            </div>
+            <div class="how-contents">
+                <div class="col-md-6">
+                    <p>Each session is carefully crafted to flow through twenty levels of difficulty. We use the analogy of a child learning to climb a stair one at a time. Some children learn to climb quickly while some may need more guidance at certain stages. We try to replicate this same thought to teach specific topics to children by providing several intermediate steps to guide and steer a student to the top.</p>
+                    <p>The difficulty areas, instruction, and guidance required for any two students to climb from Level 1 to Level 20 are very different. Predictive modeling techniques provide customized, specific and targeted instructions to take the student to the highest level of mastery. Proficiency is not attained in a single session but over several attempts on the same topic.</p>
+                </div>
+            </div>
+            <div class="how-image">
+                <div class="col-md-6">
+                        <img src="img/how-img1.png" class="img-responsive" alt="">
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Footer -->
 <div id="footer"></div>
-
 <!-- Login Modal -->
 <div class="container">
     <div class="modal fade" id="myModal" role="dialog">
@@ -237,6 +258,7 @@
 						<label class="sr-only" for="userid">Email or Phone Number</label>
 						<input type="text" class="form-control" id="userid" name="userid" placeholder="Email or Phone Number" required>
 						</div>
+						
 						<!-- button to add OTP -->
 						<div>
 						<button type="button" form="login-nav" onClick="OTPFunction()" class="button" id="OTPlogin">Generate OTP</button>
@@ -252,7 +274,7 @@
 						<input type="submit" class="sign-in-btn" id="signin" name="signin" value="Sign In"></input>
 						</div>
 				</form>
-				
+				 
 				<?php
 						if(isset($_POST['signin'])){
 						$userid = trim($_POST['userid']);
@@ -525,7 +547,7 @@
 								} 
 						}
 				?>
-								 
+				
                         <p class="text-center">or</p>
                         <div class="google-button-sec">
                             <button class="sign-google">
@@ -538,10 +560,8 @@
                             </button>
                         </div>
                     </div>
-               
-			    <div class="modal-body" class="text-center" id="tid">
+					<div class="modal-body" class="text-center" id="tid">
 					</div>
-					
                 <div class="modal-footer">
                     <p class="text-center">New here ? <a href="sign-up">Sign Up</a></p>
                 </div>
@@ -549,15 +569,8 @@
         </div>
     </div>
 </div>
-	
 <script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="footer.js"></script>
 <script src="assets/js/bootstrap.js"></script>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
- </script>
+<script src="footer.js"></script>
 </body>
 </html>
